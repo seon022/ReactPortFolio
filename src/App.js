@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import "tailwindcss/tailwind.css";
 import './App.css';
 
+import { ResponsiveProvider } from './context/responsive';
+import { ScrollProvider } from "./context/scrollEvent";
+
+import MainIntro from './main/MainIntro';
+import Main2 from "./main/Main2";
+
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+            <ResponsiveProvider>
+                <ScrollProvider>
+                    <div className="App">
+                        <MainIntro />
+                        <Main2 />
+                    </div>
+                </ScrollProvider>
+            </ResponsiveProvider>
+        
+    );
 }
 
 export default App;
