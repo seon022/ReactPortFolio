@@ -73,15 +73,15 @@ const Skill = styled.div`
             padding: 10px;
         }
         &.mo{
-            width: 80vw;
-            margin-left: -40vw;
-            padding: 10px;
+            width: 76vw;
+            margin-left: -38vw;
+            padding: 8px;
         }
         .skillIn{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 90%;
+            width: 94%;
             margin: 0 auto;
         }
 

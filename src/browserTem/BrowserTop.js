@@ -135,51 +135,51 @@ const NowTap = styled.div`
 
 const Dots = styled.div`
 
-display: flex;
-align-items: center;    
-margin-left: 8px;
-margin-bottom: 6px;
-    p{
-        width: 16px;
-        height: 16px;
-        margin-left: 8px;
-        text-indent: -9999px;
-        border-radius: 50%;
-    }
-    .red{
-        background-color: #FF554E;
-    }
-    .yellow{
-        background-color: #FDB528;
-    }
-    .green{
-        background-color: #25C338;
-        margin-top: 2px;
-    }
+    display: flex;
+    align-items: center;    
+    margin-left: 8px;
+    margin-bottom: 6px;
+        p{
+            width: 16px;
+            height: 16px;
+            margin-left: 8px;
+            text-indent: -9999px;
+            border-radius: 50%;
+        }
+        .red{
+            background-color: #FF554E;
+        }
+        .yellow{
+            background-color: #FDB528;
+        }
+        .green{
+            background-color: #25C338;
+            margin-top: 2px;
+        }
 
 `
 const AddressBar =styled.div`
 
-display: flex;
-align-items: center;
-justify-content: space-between;
-min-width: 100px;
-background-color: #F6F6F6;
-padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100px;
+    background-color: #F6F6F6;
+    padding: 8px 0;
 
-        p{
-            width: 26px;
-            height: 26px;
-            text-indent: -9999px;
-            background-size: 26px 26px;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .addressLetter{
-            width: 100%;
-            margin-left: 10px;
-            max-width: 180px;
-        }
+            p{
+                width: 26px;
+                height: 26px;
+                text-indent: -9999px;
+                background-size: 26px 26px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .addressLetter{
+                width: 100%;
+                margin-left: 10px;
+                max-width: 180px;
+            }
 `
 
 const BarLeftWrap = styled.div`
@@ -189,6 +189,7 @@ display: flex;
     .barLeft{
         display: flex;
         align-items: center;
+        margin-top: 6px;
     }
     .barLeft p {
         margin-left: 10px;
@@ -218,6 +219,7 @@ const BarRight = styled.div`
     align-items: center;   
 
     p{
+        margin-top: 4%px;
         margin-right: 12px;
         background-size: 24px auto;
     }

@@ -7,10 +7,9 @@
 
 
 .App{
-    padding-top: 40px;
-
-    /* background-image: url(../public/img/mainbg.png
-    );
+    padding: 40px 0;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
+    background-image: url(../public/img/travelPhoto_15.jpg);
+    background-position: center;
 }

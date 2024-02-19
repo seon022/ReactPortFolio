@@ -18,7 +18,6 @@ const BCWrap = styled.div`
     position: relative;
     border-radius: 0 0 20px 20px;
     background-color: #fff;
-    text-align: center;
     &.pc{
         padding: 90px 0 130px 0;
     }

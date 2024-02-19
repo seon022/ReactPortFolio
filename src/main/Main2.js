@@ -11,8 +11,10 @@ const Main2 = ()=>{
     const { isMobile } = useResponsiveApi();
     return(
         <M2Wrap className={isMobile? 'm2': 'm2 pc_flex'}>
-            <SectionFiles />
-            <Web style={Shadow}>
+            <div className={isMobile? "fileBox mo" : "fileBox"}>
+                <SectionFiles />
+            </div>
+            <Web style={Shadow} className={isMobile? 'webBox mo' : 'webBox'}>
                 <BrowserTop />
                 <M2Contents />
             </Web>
@@ -23,25 +25,37 @@ const Main2 = ()=>{
 export default Main2;
 
 const M2Wrap = styled.div`
+    padding: 0 20px;
     margin-bottom: 60px;   
     border-radius: 20px;
+    max-width: 1480px;
     &.m2.pc_flex{
-        max-width: 1440px;
         margin : 0 auto;
-        padding: 0 20px;
         display: flex;
         justify-content: space-between;
     }
     &.m2{
         margin : 0 20px; 
     }
+    .fileBox{
+        position: relative;
+        transition: 0.8s;
+    }
+    .fileBox.mo{
+        width: 100%;
+    }
 
 
 `
 const Web = styled.div`
-    width: 100%;
     border-radius: 20px;
     border: 1px solid #DCDCDC;
     background-color: #D8DDE0;
+    &.webBox{
+        width: 100%;
+        transition: 0.8s;
+    }
+    &.webBox.mo{
+    }
 
 `

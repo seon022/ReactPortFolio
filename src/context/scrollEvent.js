@@ -10,10 +10,14 @@ export function ScrollProvider({ children }) {
     const handleScroll = () => {
       console.log("scrolling");
       
-      if (!isMobile && window.scrollY > 400) {
+      if (!isMobile && window.innerWidth > 1480 && window.scrollY > 400) {
         targetRef.current.style.position = "fixed";      
         targetRef.current.style.left = "20px";      
         targetRef.current.style.top = "100px";      
+      } else{
+        targetRef.current.style.position = "relative";   
+        targetRef.current.style.left = "";      
+        targetRef.current.style.top = "";         
       }
     };
   
