@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
 import BrowserContents from "../browserTem/BrowserContents";
+import { typingLetter } from "../util/typing";
+import { useRef } from "react";
 
 const MIContents= ()=> {
     const { isMobile } = useResponsiveApi();
+    const { typingRef } = useRef();
     return(
         <BrowserContents>
         <MIWrap>
         <div className="titleWrap">
                 <div className="googleColor"><span className="letterBlue">S</span><span className="letterRed">e</span><span className="letterYellow">on</span><span className="letterBlue">Y</span><span className="letterGr">ou</span><span className="letterRed">ng</span></div>
-                <div className="title">PORTFOLIO</div>
+                <div className="typing" ref={typingRef}>🏃‍♂️{typingLetter()}</div>
             </div>
             <Skill className={isMobile? 'skill mo': 'skill'}>
                 <div className="skillIn">
@@ -35,7 +38,7 @@ const MIWrap = styled.div`
 .googleColor{
     font-size: 32px;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.5;
 }
 .letterBlue{
     color: #4285F4;
@@ -52,10 +55,22 @@ const MIWrap = styled.div`
 .letterYellow{
     color: #FBBC05;
 }
-.title{
+.typing{
     font-size: 34px;
     font-weight: 900;
-    line-height: 1.4;
+    line-height: 40px;
+}
+.typing::after {
+  content: '';
+  display: inline;
+  line-height: 20px;
+  border-right: 2px solid #777;
+  animation: cursor .9s infinite steps(2);
+}
+
+@keyframes cursor {
+  from { border-right: 2px solid #222; }
+  to { border-right: 2px solid #777; }
 }
 `
 const Skill = styled.div`

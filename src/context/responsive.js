@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { debounce, size } from 'lodash';
+import { debounce } from 'lodash';
 
 const ResponsiveContext = createContext();
 
