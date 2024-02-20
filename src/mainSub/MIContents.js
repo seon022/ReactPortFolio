@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
 import BrowserContents from "../browserTem/BrowserContents";
 import { typingLetter } from "../util/typing";
+import { typingLetter } from "../util/typing";
 import { useRef } from "react";
 
 const MIContents= ()=> {
