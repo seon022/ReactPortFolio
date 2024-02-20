@@ -20,6 +20,7 @@ export default AboutMe;
 
 const AboutWrap  = styled.div`
     margin: 0 auto;
+    margin-bottom: 90px;
 `
 
 const MyTitle= styled.div`
@@ -32,6 +33,7 @@ const MyTitle= styled.div`
     margin-bottom: 30px;
     }
     .titleTxt{
+    margin-bottom: 40px;
     font-size: 22px;
     }
 `

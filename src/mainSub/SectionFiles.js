@@ -34,7 +34,7 @@ export default SectionFiles;
 
 
 const Files = styled.div`
-    position: absolute  ;
+    position: relative;
     text-align: center;
     color: #fff;
     transition: 0.8s;
