@@ -6,10 +6,10 @@ const ScrollContext = createContext();
 export function ScrollProvider({ children }) {
     const { isMobile } = useResponsiveApi();
 
-    const targetRef = useRef();  
+    const targetRef =useRef();
 
     const handleScroll = () => {
-      if (!isMobile) {
+      if (isMobile) {
       } else{
       }
     };

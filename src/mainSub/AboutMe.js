@@ -20,7 +20,7 @@ export default AboutMe;
 
 const AboutWrap  = styled.div`
     margin: 0 auto;
-    margin-bottom: 90px;
+    margin-bottom: 120px;
 `
 
 const MyTitle= styled.div`

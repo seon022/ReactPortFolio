@@ -1,35 +1,76 @@
 
 import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
+import { Link } from "react-scroll";
+import { useEffect, useState } from "react";
 
 const SectionFiles = ()=> {
     const { isMobile } = useResponsiveApi();
+    const [sideQuick, setSideQuick] = useState(false);
+
+    useEffect(()=>{
+
+    },[]);
+
     return(
-        <Files className={isMobile? 'files_mo' : 'files_pc'}>
-            <div className="index project">
-                <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
-                    <p className="cursor">click</p>
-                </div>
-                <p>About📌</p>
-            </div>
-            <div className="index GitHub">
-                <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
-                    <p className="cursor">click</p>
-                </div>
-                <p>Project🌱</p>
-            </div>
-            <div className="index Education">
-                <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
-                    <p className="cursor">click</p>
-                </div>
-                <p>Education📖</p>
-            </div>
-        </Files>
+        <div>
+            {!isMobile? <Folder onClick={() => setSideQuick(true)} className={ sideQuick? 'goto clicked': 'goto' } >
+                            <p>Click!</p>
+                            <p>GoTo</p>
+                        </Folder> 
+            : <span></span>}
+            <Files className={!isMobile ? `files_pc ${sideQuick? 'onClick': ''}`: 'files_mo'}>
+                <Link to="about" spy={true} smooth={true} >
+                    <div className="index project">
+                        <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
+                            <p className="cursor">click</p>
+                        </div>
+                        <p>About📌</p>
+                    </div>
+                </Link>
+                <Link to="Project" spy={true} smooth={true} >
+                    <div className="index Project">
+                        <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
+                            <p className="cursor">click</p>
+                        </div>
+                        <p>Project🌱</p>
+                    </div>
+                </Link>
+                <Link to="Education" spy={true} smooth={true} >
+                    <div className="index Education">
+                        <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
+                            <p className="cursor">click</p>
+                        </div>
+                        <p>Education📖</p>
+                    </div>
+                </Link>
+            </Files>
+        </div>
     );
 }
 
 export default SectionFiles;
 
+const Folder = styled.div`
+    position: fixed;
+    left: 0;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70px;
+    height: 50px;
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0,0,0 , 0.4);
+    border-radius: 0 10px 10px 0;
+    z-index: 1000;
+    transition: 0.4s;
+    &.clicked{
+        left: -100%;
+    }
+`
 
 const Files = styled.div`
     position: fixed;
@@ -39,17 +80,21 @@ const Files = styled.div`
     text-align: center;
     background-color: rgba(0,0,0 , 0.2);
     border-radius: 10px;
-    transition: 0.8s;
+    transition: 0.6s;
     z-index: 1000;
+    
     &.files_pc{
         top: 30px;
-        left: 20px;
+        left: -100%;
         width: 100px;
         justify-content: space-between;
         font-size: 15px;
         font-weight: 700;
     }
-
+    &.files_pc.onClick{
+        left: 10px;
+    }
+    
     &.files_pc > div{
         position: relative;
         margin: 30px 0 50px 0 ;
@@ -85,7 +130,6 @@ const Files = styled.div`
         right: 20px;
         display: flex;
         justify-content: space-between;
-        width: 90%;
         margin: 0 auto;
         font-size: 14px;
         font-weight: 700;
