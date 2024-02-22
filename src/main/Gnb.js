@@ -17,9 +17,9 @@ export default Gnb;
 
 const GnbWrap = styled.div`
 
-.fileBox{
+    .fileBox{
         position: relative;
-        transition: 0.8s;
+        transition: 0.4s;
     }
     .fileBox.mo{
         width: 100%;

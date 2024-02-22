@@ -1,31 +1,31 @@
+
+
+import { useRef } from "react";
 import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
 import BrowserContents from "../browserTem/BrowserContents";
-import { typingLetter } from "../util/typing";
-import { typingLetter } from "../util/typing";
-import { useRef } from "react";
+import TypingText from "../util/TypingText";
 
 const MIContents= ()=> {
     const { isMobile } = useResponsiveApi();
-    const { typingRef } = useRef();
     return(
         <BrowserContents>
-        <MIWrap>
-        <div className="titleWrap">
-                <div className="googleColor"><span className="letterBlue">S</span><span className="letterRed">e</span><span className="letterYellow">on</span><span className="letterBlue">Y</span><span className="letterGr">ou</span><span className="letterRed">ng</span></div>
-                <div className="typing" ref={typingRef}>🏃‍♂️{typingLetter()}</div>
-            </div>
-            <Skill className={isMobile? 'skill mo': 'skill'}>
-                <div className="skillIn">
-                    <p className="html">html</p>
-                    <p className="css">css</p>
-                    <p className="js">js</p>
-                    <p className="react">react</p>
-                    <p className="ts">ts</p>
-                    <p className="nodejs">nodejs</p>
+            <MIWrap>
+            <div className="titleWrap">
+                    <div className="googleColor"><span className="letterBlue">S</span><span className="letterRed">e</span><span className="letterYellow">on</span><span className="letterBlue">Y</span><span className="letterGr">ou</span><span className="letterRed">ng</span></div>
+                    <div className="typing">{<TypingText text="PORTFOLIO" speed={120} fontSize="34px" color="#222"  />}</div>
                 </div>
-            </Skill>
-        </MIWrap>
+                <Skill className={isMobile? 'skill mo': 'skill'}>
+                    <div className="skillIn">
+                        <p className="html">html</p>
+                        <p className="css">css</p>
+                        <p className="js">js</p>
+                        <p className="react">react</p>
+                        <p className="ts">ts</p>
+                        <p className="nodejs">nodejs</p>
+                    </div>
+                </Skill>
+            </MIWrap>
         </BrowserContents>
     )
 }
@@ -58,20 +58,8 @@ const MIWrap = styled.div`
 }
 .typing{
     font-size: 34px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 40px;
-}
-.typing::after {
-  content: '';
-  display: inline;
-  line-height: 20px;
-  border-right: 2px solid #777;
-  animation: cursor .9s infinite steps(2);
-}
-
-@keyframes cursor {
-  from { border-right: 2px solid #222; }
-  to { border-right: 2px solid #777; }
 }
 `
 const Skill = styled.div`

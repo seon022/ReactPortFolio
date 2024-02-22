@@ -1,24 +1,22 @@
 
 import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
-import { useScrollApi } from "../context/scrollEvent";
 
 const SectionFiles = ()=> {
     const { isMobile } = useResponsiveApi();
-    const { targetRef } = useScrollApi();
     return(
-        <Files className={isMobile? 'files files_Flex' : 'files_pc'} ref={targetRef}>
+        <Files className={isMobile? 'files_mo' : 'files_pc'}>
             <div className="index project">
                 <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
                     <p className="cursor">click</p>
                 </div>
-                <p>Project📌</p>
+                <p>About📌</p>
             </div>
             <div className="index GitHub">
                 <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
                     <p className="cursor">click</p>
                 </div>
-                <p>GitHub🌱</p>
+                <p>Project🌱</p>
             </div>
             <div className="index Education">
                 <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
@@ -34,13 +32,20 @@ export default SectionFiles;
 
 
 const Files = styled.div`
-    position: relative;
-    text-align: center;
+    position: fixed;
+    box-sizing: border-box;
+    padding: 10px;
     color: #fff;
+    text-align: center;
+    background-color: rgba(0,0,0 , 0.2);
+    border-radius: 10px;
     transition: 0.8s;
+    z-index: 1000;
     &.files_pc{
+        top: 30px;
+        left: 20px;
+        width: 100px;
         justify-content: space-between;
-        margin-right: 30px;
         font-size: 15px;
         font-weight: 700;
     }
@@ -74,12 +79,14 @@ const Files = styled.div`
     }
 
 
-    &.files_Flex{
+    &.files_mo{
+        top: 10px;
+        left: 20px;
+        right: 20px;
         display: flex;
         justify-content: space-between;
         width: 90%;
         margin: 0 auto;
-        margin-bottom: 40px;
         font-size: 14px;
         font-weight: 700;
     }

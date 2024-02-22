@@ -13,3 +13,6 @@
     background-image: url(../public/img/travelPhoto_15.jpg);
     background-position: center;
 }
+.gnbLeft{
+  margin-left: 20px;
+}

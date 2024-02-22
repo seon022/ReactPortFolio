@@ -11,15 +11,16 @@ import Gnb from "./main/Gnb";
 
 function App() {
     return (
-            <ResponsiveProvider>
-                <ScrollProvider>
+        <ResponsiveProvider>
+            <ScrollProvider>
                     <div className="App">
+                        <Gnb />
                         <MainIntro />
                         <Main2 />
                     </div>
-                </ScrollProvider>
-            </ResponsiveProvider>
-        
+            </ScrollProvider>
+        </ResponsiveProvider>
+    
     );
 }
 

@@ -6,7 +6,6 @@ import { Shadow } from "../browserTem/Shadow";
 
 import BrowserTop from "../browserTem/BrowserTop";
 import M2Contents from "../mainSub/M2Contents";
-import Gnb from "./Gnb";
 
 const Main2 = ()=>{
     const { isMobile } = useResponsiveApi();
@@ -14,7 +13,6 @@ const Main2 = ()=>{
 
     return(
         <M2Wrap className={isMobile? 'm2': 'm2 pc_flex'}>
-            <Gnb />
             <Web style={Shadow} className={isMobile? 'webBox mo' : 'webBox'} ref={webRef}>
                 <BrowserTop />
                 <M2Contents />
@@ -27,15 +25,15 @@ export default Main2;
 
 const M2Wrap = styled.div`
     padding: 0 20px;
+    margin: 0 auto;
     margin-bottom: 60px;   
     border-radius: 20px;
+     max-width: 1480px;
     &.m2.pc_flex{
         display: flex;
         justify-content: center;
-    max-width: 1480px;
     }
     &.m2{
-        margin: 0 auto;
     }
 
 
