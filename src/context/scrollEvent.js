@@ -6,21 +6,11 @@ const ScrollContext = createContext();
 export function ScrollProvider({ children }) {
     const { isMobile } = useResponsiveApi();
 
-    const targetRef = useRef(null);  
-    const webRef = useRef(null);
+    const targetRef = useRef();  
 
     const handleScroll = () => {
-      console.log("scrolling");
-      
-      if (!isMobile && window.innerWidth > 1480 && window.scrollY > 600) {
-        // targetRef.current.style.transform = "translateX(-100%)"
-        targetRef.current.style.position = "fixed";      
-        targetRef.current.style.left = "20px";      
-        targetRef.current.style.top = "100px"; 
+      if (!isMobile) {
       } else{
-        targetRef.current.style.position = "relative";   
-        targetRef.current.style.left = "";      
-        targetRef.current.style.top = "";    
       }
     };
   

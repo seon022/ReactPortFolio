@@ -7,7 +7,7 @@ import { useResponsiveApi } from "../context/responsive";
 const MainIntro = ()=> {
     const { isMobile } = useResponsiveApi();
     return(
-        <IntroWrap className={isMobile? 'introWrap intro_mb' : 'introWrap' }>
+        <IntroWrap className={isMobile? 'introWrap intro_mb' : 'introWrap' }> 
             <Web>
                 <BrowserTop />
                 <MIContents />
@@ -18,18 +18,17 @@ const MainIntro = ()=> {
 export default MainIntro;
 
 const IntroWrap = styled.div`
+    max-width: 1480px;
+    margin: 0 auto;
     &.introWrap{
-        max-width: 1480px;
-        margin : 0 auto;
-        padding: 0 20px;
-        margin-bottom: 60px;
+        padding: 20px;
     }
     &.introWrap.intro_mb{
-        margin-bottom: 50px;
+        padding-top: 100px;
     }
-    
 `
 const Web = styled.div`
+
     text-align: center;
     width: 100%;
     border-radius: 20px;

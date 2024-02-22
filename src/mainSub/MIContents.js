@@ -1,27 +1,31 @@
+
+
+import { useRef } from "react";
 import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
 import BrowserContents from "../browserTem/BrowserContents";
+import TypingText from "../util/TypingText";
 
 const MIContents= ()=> {
     const { isMobile } = useResponsiveApi();
     return(
         <BrowserContents>
-        <MIWrap>
-        <div className="titleWrap">
-                <div className="googleColor"><span className="letterBlue">S</span><span className="letterRed">e</span><span className="letterYellow">on</span><span className="letterBlue">Y</span><span className="letterGr">ou</span><span className="letterRed">ng</span></div>
-                <div className="title">PORTFOLIO</div>
-            </div>
-            <Skill className={isMobile? 'skill mo': 'skill'}>
-                <div className="skillIn">
-                    <p className="html">html</p>
-                    <p className="css">css</p>
-                    <p className="js">js</p>
-                    <p className="react">react</p>
-                    <p className="ts">ts</p>
-                    <p className="nodejs">nodejs</p>
+            <MIWrap>
+            <div className="titleWrap">
+                    <div className="googleColor"><span className="letterBlue">S</span><span className="letterRed">e</span><span className="letterYellow">on</span><span className="letterBlue">Y</span><span className="letterGr">ou</span><span className="letterRed">ng</span></div>
+                    <div className="typing">{<TypingText text="PORTFOLIO" speed={120} fontSize="34px" color="#222"  />}</div>
                 </div>
-            </Skill>
-        </MIWrap>
+                <Skill className={isMobile? 'skill mo': 'skill'}>
+                    <div className="skillIn">
+                        <p className="html">html</p>
+                        <p className="css">css</p>
+                        <p className="js">js</p>
+                        <p className="react">react</p>
+                        <p className="ts">ts</p>
+                        <p className="nodejs">nodejs</p>
+                    </div>
+                </Skill>
+            </MIWrap>
         </BrowserContents>
     )
 }
@@ -35,7 +39,7 @@ const MIWrap = styled.div`
 .googleColor{
     font-size: 32px;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.5;
 }
 .letterBlue{
     color: #4285F4;
@@ -52,10 +56,10 @@ const MIWrap = styled.div`
 .letterYellow{
     color: #FBBC05;
 }
-.title{
+.typing{
     font-size: 34px;
-    font-weight: 900;
-    line-height: 1.4;
+    font-weight: 700;
+    line-height: 40px;
 }
 `
 const Skill = styled.div`
