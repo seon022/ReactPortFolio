@@ -10,8 +10,8 @@ const MIContents= ()=> {
     const { isMobile } = useResponsiveApi();
     return(
         <BrowserContents>
-            <MIWrap>
-            <div className="titleWrap">
+            <MIWrap className={isMobile? "about_mo": ""}>
+                <div className="titleWrap">
                     <div className="googleColor"><span className="letterBlue">S</span><span className="letterRed">e</span><span className="letterYellow">on</span><span className="letterBlue">Y</span><span className="letterGr">ou</span><span className="letterRed">ng</span></div>
                     <div className="typing">{<TypingText text="PORTFOLIO" speed={120} fontSize="34px" color="#222"  />}</div>
                 </div>
@@ -33,8 +33,13 @@ const MIContents= ()=> {
 export default MIContents;
 
 const MIWrap = styled.div`
+padding-top: 60px;
+&.about_mo{
+    padding-top: 30px;
+}
 .titleWrap{
     padding : 20px;
+    margin-bottom: 100px;
 }
 .googleColor{
     font-size: 32px;

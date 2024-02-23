@@ -9,11 +9,10 @@ import M2Contents from "../mainSub/M2Contents";
 
 const Main2 = ()=>{
     const { isMobile } = useResponsiveApi();
-    const { webRef } = useScrollApi();
 
     return(
-        <M2Wrap className={isMobile? 'm2': 'm2 pc_flex'}>
-            <Web style={Shadow} className={isMobile? 'webBox mo' : 'webBox'} ref={webRef}>
+        <M2Wrap className={isMobile? 'm2': 'm2 pc_flex'} id="about">
+            <Web style={Shadow} className={isMobile? 'webBox mo' : 'webBox'}>
                 <BrowserTop />
                 <M2Contents />
             </Web>

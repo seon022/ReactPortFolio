@@ -1,13 +1,15 @@
 import styled from "styled-components";
+import { useResponsiveApi } from "../context/responsive";
 
 const AboutMe =()=> {
+    const { isMobile } = useResponsiveApi();
     return(
-        <AboutWrap>
+        <AboutWrap id="aboutSection" className={isMobile? "about_mo": ""}>
             <MyTitle>
-                <div className="title">
+                <div className={isMobile? "title": "title pc"}>
                     About Me
                 </div>
-                <div className="titleTxt">안녕하세요, <br /><span>🐢꾸준히 성장하는 프론트엔드 개발자를 꿈꾸는 강선영입니다.</span></div>
+                <div className="titleTxt">안녕하세요, <br /><span>🌱꾸준히 성장하는 프론트엔드 개발자를 꿈꾸는 강선영입니다.🌳</span></div>
             </MyTitle>
             <MyGoal>
                 새로운 것을 기술로 구현해보는 것을 좋아합니다. 도전과 배움을 즐기는 프론트엔드 개발자가 되겠습니다.
@@ -19,18 +21,28 @@ const AboutMe =()=> {
 export default AboutMe;
 
 const AboutWrap  = styled.div`
+    padding-top: 60px;
     margin: 0 auto;
-    margin-bottom: 90px;
+    margin-bottom: 120px;
+    &.about_mo{
+        padding-top: 20px;
+    }
 `
 
 const MyTitle= styled.div`
+    text-align: center;
     margin: 0 20px;
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: 900;
     line-height: 1.6;
     .title{
+    font-size: 10vw;
     margin-bottom: 30px;
+    }
+    .title.pc{
+        margin-left: 10px;
+        font-size: 7vw;
     }
     .titleTxt{
     margin-bottom: 40px;

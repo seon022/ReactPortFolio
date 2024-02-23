@@ -5,12 +5,13 @@ import { useResponsiveApi } from "../context/responsive";
 const ProjectItem = ()=>{
     const { isMobile } = useResponsiveApi();
     return(
-        <ProjectWrap>
+        <ProjectWrap id="ProjectSection">
         <div className="project">Project</div>
         <ItemWrap>
             <div className={isMobile? 'item item_mo': 'item'}>
                 <ProjectTitle>
-                    리액트 여행일정 앱
+                    <div>팀 프로젝트</div>
+                    <div>리액트 여행일정 앱</div>
                 </ProjectTitle>
                 <ProjectCont>
                     <div className="pr_skills">
@@ -20,6 +21,7 @@ const ProjectItem = ()=>{
                         <div>
                             <p>React</p>
                             <p>JavaScript</p>
+                            <p>styled-components</p>
                         </div>
                     </div>
                     <div className="pr_time">
@@ -32,7 +34,32 @@ const ProjectItem = ()=>{
             </div>
             <div className={isMobile? 'item item_mo': 'item'}>
                 <ProjectTitle>
-                    국립중앙박물관 반응형 홈페이지
+                    <div>개인 프로젝트</div>
+                    <div>국립중앙박물관 반응형 홈페이지</div>
+                </ProjectTitle>
+                <ProjectCont>
+                    <div className="pr_skills">
+                        <div className="pr_head">
+                            skills
+                        </div>
+                        <div>
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                        </div>
+                    </div>
+                    <div className="pr_time">
+                        <div className="pr_head">진행기간 : </div>
+                        <div>
+                            2023.11 - 2023.11
+                        </div>
+                    </div>
+                </ProjectCont>
+            </div>
+            
+            <div className={isMobile? 'item item_mo': 'item'}>
+                <ProjectTitle>
+                    울산 관광페이지
                 </ProjectTitle>
             </div>
         </ItemWrap>
@@ -74,5 +101,11 @@ const ProjectTitle = styled.div`
     font-weight: 900;
 `
 const ProjectCont = styled.div`
+    .pr_time{
+        display: flex;
+    }
+    .pr_time > div{
+        margin-right: 20px;
+    }
 
 `
