@@ -7,7 +7,7 @@ import { useResponsiveApi } from "../context/responsive";
 const MainIntro = ()=> {
     const { isMobile } = useResponsiveApi();
     return(
-        <IntroWrap className={isMobile? 'introWrap intro_mb' : 'introWrap' }> 
+        <IntroWrap className={isMobile? 'introWrap intro_mb' : 'introWrap' } > 
             <Web>
                 <BrowserTop />
                 <MIContents />

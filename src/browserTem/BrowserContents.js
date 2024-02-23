@@ -19,10 +19,10 @@ const BCWrap = styled.div`
     border-radius: 0 0 20px 20px;
     background-color: #fff;
     &.pc{
-        padding: 90px 0 130px 0;
+        padding: 40px 0 130px 0;
     }
     &.mo{
-        padding: 70px 0 80px 0;
+        padding: 40px 0 80px 0;
     }
 `
 
