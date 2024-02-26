@@ -5,123 +5,12 @@ import ProjectTripple from "../project/ProjectTripple";
 
 const ProjectItem = ()=>{
     const { isMobile } = useResponsiveApi();
+
     return(
         <ProjectWrap id="ProjectSection">
         <div className="project">Project</div>
         <ItemWrap>
-            <div className={isMobile? 'item item_mo': 'item'}>
-                <ProjectTitle>
-                    <div className="category">팀 프로젝트</div>
-                    <div className="pr_name">리액트 여행일정 앱</div>
-                </ProjectTitle>
-                <ProjectCont>
-                    <div className="pr_time">
-                        <div className="pr_head">진행기간 </div>
-                        <div>
-                            2024.01 - 2024.02
-                        </div>
-                    </div>
-                    <ProjectTripple />
-                    <div className="pr_skills">
-                        <div className="pr_head">
-                            skills
-                        </div>
-                        <div className="skillBox">
-                            <p className="sk_react">React</p>
-                            <p className="sk_javascript">JavaScript</p>
-                            <p className="sk_styled">styled-components</p>
-                        </div>
-                    </div>
-                    <div className="projectURL">
-                        <p className="github"><a href="https://github.com/seon022/ReactPortFolio.git" target="_blank">https://github.com/seon022/ReactPortFolio.git</a></p>
-                        <p className="projectSite"><a href="https://team-c-triple.web.app/" target="_blank">https://team-c-triple.web.app/</a></p>
-                    </div>
-                </ProjectCont>
-            </div>
-            <div className={isMobile? 'item item_mo': 'item'}>
-                <ProjectTitle>
-                    <div className="category">개인 프로젝트</div>
-                    <div className="pr_name">국립중앙박물관 반응형 홈페이지</div>
-                </ProjectTitle>
-                <ProjectCont>
-                    <div className="pr_time">
-                        <div className="pr_head">진행기간 </div>
-                        <div>
-                            2023.12 - 2023.12
-                        </div>
-                    </div>
-                    <div className="pr_skills">
-                        <div className="pr_head">
-                            skills
-                        </div>
-                        <div className="skillBox">
-                            <p className="sk_react">React</p>
-                            <p className="sk_javascript">JavaScript</p>
-                            <p className="sk_styled">styled-components</p>
-                        </div>
-                    </div>
-                    <div className="projectURL">
-                        <p className="github"><a href="https://github.com/seon022/project02-museum.git" target="_blank">https://github.com/seon022/project02-museum.git</a></p>
-                        <p className="projectSite"><a href="https://ksy-project-koreamuseum.netlify.app/">https://ksy-project-koreamuseum.netlify.app/</a></p>
-                    </div>
-                </ProjectCont>
-            </div>
-            <div className={isMobile? 'item item_mo': 'item'}>
-                <ProjectTitle>
-                    <div className="category">개인 프로젝트</div>
-                    <div className="pr_name">스타벅스 홈페이지 UI 구현</div>
-                </ProjectTitle>
-                <ProjectCont>
-                    <div className="pr_time">
-                        <div className="pr_head">진행기간 </div>
-                        <div>
-                            2023.12 - 2023.12
-                        </div>
-                    </div>
-                    <div className="pr_skills">
-                        <div className="pr_head">
-                            skills
-                        </div>
-                        <div className="skillBox">
-                            <p className="sk_react">React</p>
-                            <p className="sk_javascript">JavaScript</p>
-                            <p className="sk_styled">styled-components</p>
-                        </div>
-                    </div>
-                    <div className="projectURL">
-                        <p className="github"><a href="https://github.com/seon022/project01-starbucks.git" target="_blank">https://github.com/seon022/project01-starbucks.git</a></p>
-                        <p className="projectSite"><a href="https://ksy-project-starbucks.netlify.app/">https://ksy-project-starbucks.netlify.app/</a></p>
-                    </div>
-                </ProjectCont>
-            </div>
-            <div className={isMobile? 'item item_mo': 'item'}>
-                <ProjectTitle>
-                    <div className="category">개인 프로젝트</div>
-                    <div className="pr_name">울산 문화관광 웹사이트</div>
-                </ProjectTitle>
-                <ProjectCont>
-                    <div className="pr_time">
-                        <div className="pr_head">진행기간 </div>
-                        <div>
-                            2023.11 - 2023.11
-                        </div>
-                    </div>
-                    <div className="pr_skills">
-                        <div className="pr_head">
-                            skills
-                        </div>
-                        <div className="skillBox">
-                            <p className="sk_react">React</p>
-                            <p className="sk_javascript">JavaScript</p>
-                            <p className="sk_styled">styled-components</p>
-                        </div>
-                    </div>
-                    <div className="projectURL">
-                        <p className="github"><a href="https://github.com/seon022/project1-2_UlasnTourWeb.gitt" target="_blank">https://github.com/seon022/project1-2_UlasnTourWeb.git</a></p>
-                        <p className="projectSite"><a href="https://ksy-project-ulsantour.netlify.app/">https://ksy-project-ulsantour.netlify.app/</a></p>
-                    </div>
-                </ProjectCont>
-            </div>
+            
         </ItemWrap>
         </ProjectWrap>
     )
