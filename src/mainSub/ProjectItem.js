@@ -18,7 +18,7 @@ const ProjectItem = ()=>{
                         <div className="pr_head">
                             skills
                         </div>
-                        <div>
+                        <div className="skillBox">
                             <p>React</p>
                             <p>JavaScript</p>
                             <p>styled-components</p>
@@ -42,7 +42,7 @@ const ProjectItem = ()=>{
                         <div className="pr_head">
                             skills
                         </div>
-                        <div>
+                        <div className="skillBox">
                             <p>HTML</p>
                             <p>CSS</p>
                             <p>JavaScript</p>
@@ -101,11 +101,32 @@ const ProjectTitle = styled.div`
     font-weight: 900;
 `
 const ProjectCont = styled.div`
+    .pr_skills{
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .pr_head{
+        margin-left: 10px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    .skillBox{
+        display: flex;
+        margin-left: 10px;
+    }
+
+    .skillBox p{
+        padding: 4px 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+        background-color: skyblue;
+        font-weight: 700;
+        color: #fff;
+    }
     .pr_time{
         display: flex;
     }
     .pr_time > div{
         margin-right: 20px;
     }
-
 `
