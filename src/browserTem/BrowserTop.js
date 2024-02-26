@@ -177,7 +177,7 @@ const AddressBar =styled.div`
             }
             .addressLetter{
                 width: 100%;
-                margin-left: 10px;
+                margin-left: 6px;
                 max-width: 180px;
             }
 `
@@ -197,9 +197,10 @@ display: flex;
     `
 const AddressBox = styled.div`
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-left: 10px;
-    padding: 4px 20px 4px 0;
+    padding: 4px 10px 4px 0;
     background-color: #fff;
     border-radius: 20px;
     p{

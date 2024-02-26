@@ -29,8 +29,6 @@ const IntroWrap = styled.div`
     }
 `
 const Web = styled.div`
-
-    text-align: center;
     width: 100%;
     border-radius: 20px;
     border: 1px solid #DCDCDC;

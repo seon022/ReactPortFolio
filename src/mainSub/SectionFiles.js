@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
 import { Link } from "react-scroll";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const SectionFiles = ()=> {
     const { isMobile } = useResponsiveApi();

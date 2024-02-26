@@ -23,6 +23,7 @@ const MIContents= ()=> {
                         <p className="react">react</p>
                         <p className="ts">ts</p>
                         <p className="nodejs">nodejs</p>
+                        <p className="jquery">jquery</p>
                     </div>
                 </Skill>
             </MIWrap>
@@ -33,6 +34,7 @@ const MIContents= ()=> {
 export default MIContents;
 
 const MIWrap = styled.div`
+text-align: center;
 padding-top: 60px;
 &.about_mo{
     padding-top: 30px;
@@ -137,5 +139,7 @@ const Skill = styled.div`
         .nodejs{
             background-image: url(img/icon-ts.svg);
         }
-    
+        .jquery{
+            background-image: url(img/icons8-jquery.png);
+        }
 `
