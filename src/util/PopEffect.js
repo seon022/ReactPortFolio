@@ -11,7 +11,9 @@ export const PopEffect = ({children})=>{
         }
     `
     return(
-        <div style={Anim}>{children}</div>
+        <>
+        {children}
+        </>
     );
 }
 
