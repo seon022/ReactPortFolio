@@ -12,7 +12,7 @@ const AboutMe =()=> {
                 <div className="titleTxt">안녕하세요, <br /><span>🌱꾸준히 성장하는 프론트엔드 개발자를 꿈꾸는 강선영입니다.🌳</span></div>
             </MyTitle>
             <MyGoal>
-                새로운 것을 기술로 구현해보는 것을 좋아합니다. 도전과 배움을 즐기는 프론트엔드 개발자가 되겠습니다.
+                새로운 것을 기술로 구현해보는 것을 좋아합니다.
             </MyGoal>
         </AboutWrap>
     )
@@ -21,6 +21,7 @@ const AboutMe =()=> {
 export default AboutMe;
 
 const AboutWrap  = styled.div`
+    text-align: center;
     padding-top: 60px;
     margin: 0 auto;
     margin-bottom: 120px;
@@ -30,7 +31,6 @@ const AboutWrap  = styled.div`
 `
 
 const MyTitle= styled.div`
-    text-align: center;
     margin: 0 20px;
     margin-bottom: 30px;
     font-size: 30px;
