@@ -3,8 +3,8 @@ import ProjectTripple from "../project/ProjectTripple";
 import ProjectMuseum from "../project/ProjectMuseum";
 import ProjectStarbucks from "../project/ProjectStarbucks";
 import ProjectPortfolio from "../project/ProjectPortfolio";
-import ProjectUlsan from "../project/ProjectUlsan";
 import { useResponsiveApi } from "../context/responsive";
+import ProjectUlsan from "../project/ProjectUlsan";
 
 const ProjectItem = ()=>{
     const { isMobile } = useResponsiveApi();
@@ -25,7 +25,7 @@ const ProjectItem = ()=>{
 export default ProjectItem;
 
 const ProjectWrap = styled.div`
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     .project{
         margin-bottom: 60px;
         font-size: 40px;
@@ -34,20 +34,19 @@ const ProjectWrap = styled.div`
 `
 const ItemWrap = styled.div`
     box-sizing: border-box;
-    width: 100%;
     .item{
         box-sizing: border-box;
         width: 100%;
-        border-top: 5px solid #4285F4;
+        border-top: 5px solid #65A0E9;
         box-shadow: 4px 10px 10px 1px rgba(0,0,0, 0.1);
         background-color: #fff;
         }
     .item.pc{
-        padding: 40px 20px;
+        padding: 50px 20px 40px 20px;
         margin-bottom: 60px;
     }
     .item.mo{
-        padding: 20px 10px;
+        padding: 30px 10px 20px 10px;
         margin-bottom: 50px;
     }
     .pr_name{
@@ -57,5 +56,13 @@ const ItemWrap = styled.div`
     }
     .pr_head{
         margin-right: 10px;
+    }
+    .pr_skills{
+        margin-top: 40px;
+    }
+    .pr_subTitle{
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 600;
     }
 `

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const TypingText = ({text, speed, fontSize, color}) => {
   TypingText.defaultProps = {
-    fontSize: '14px', //기본값
+    fontSize: '24px', //기본값
     color: 'black'//기본값
   }
   const [Text, setText] = useState("");

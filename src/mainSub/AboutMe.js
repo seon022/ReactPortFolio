@@ -4,7 +4,7 @@ import { useResponsiveApi } from "../context/responsive";
 const AboutMe =()=> {
     const { isMobile } = useResponsiveApi();
     return(
-        <AboutWrap id="aboutSection" className={isMobile? "about_mo": ""}>
+        <AboutWrap className={isMobile? "about_mo": ""}>
             <MyTitle>
                 <div className={isMobile? "title": "title pc"}>
                     About Me
@@ -21,7 +21,6 @@ const AboutMe =()=> {
 export default AboutMe;
 
 const AboutWrap  = styled.div`
-    text-align: center;
     padding-top: 60px;
     margin: 0 auto;
     margin-bottom: 120px;
@@ -37,12 +36,12 @@ const MyTitle= styled.div`
     font-weight: 900;
     line-height: 1.6;
     .title{
-    font-size: 10vw;
-    margin-bottom: 30px;
+        font-size: 8vw;
+        margin-bottom: 30px;
     }
     .title.pc{
         margin-left: 10px;
-        font-size: 7vw;
+        font-size: 60px;
     }
     .titleTxt{
     margin-bottom: 40px;

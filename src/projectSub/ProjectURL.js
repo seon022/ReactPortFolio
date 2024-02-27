@@ -43,7 +43,6 @@ const URLWrap = styled.div`
         box-sizing: border-box;
         padding: 10px 10px 6px 34px;
         background-repeat: no-repeat;
-        background-size: 24px auto;
         background-position: left 8px top 8px;
         color: #222;
         overflow: hidden;
@@ -52,9 +51,11 @@ const URLWrap = styled.div`
         word-break: break-all;
     }
     .projectURL .github a{
+        background-size: 24px auto;
         background-image: url(img/icons8-github.svg);
     }
     .projectURL .projectSite a{
-        background-image: url(img/icons8-clover.png);
+        background-size: 22px auto;
+        background-image: url(img/icons8-home.png);
     }
 `

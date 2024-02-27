@@ -13,15 +13,17 @@ const ProjectMuseum = ()=>{
                 <div className="pr_name">국립중앙박물관 반응형 홈페이지</div>
             </ProjectTitle>
             <ProjectCont>
-                <div className="pr_time">
-                    <div className="pr_head">진행기간 </div>
+                <div className="pr_info">
                     <div>
-                        2023.12 - 2023.12
+                        <div className="pr_head">진행기간 </div>
+                        <div>
+                            2023.12 - 2023.12
+                        </div>
                     </div>
                 </div>
                 <PrItemWrap>
                     <div>
-                        <p>프로젝트 소개</p>
+                        <p className="pr_subTitle">프로젝트 소개</p>
                         <p>내용</p>
                     </div>
                 </PrItemWrap>
@@ -48,21 +50,23 @@ const PrItemWrap = styled.div`
 
 const ProjectTitle = styled.div`
     margin-bottom: 30px;
-    .category{
-        margin-bottom: 6px;
-    }
     .pr_name{
         font-size: 24px;
         font-weight: 700;
     }
 `
 const ProjectCont = styled.div`
-  
-    .pr_time{
-        display: flex;
-        margin-bottom: 20px;
+    .pr_info{
+        margin-bottom: 30px;
     }
-    .pr_time > div{
-        margin-right: 20px;
+    .pr_info > div{
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .pr_head {
+        font-weight: 600;
+    }
+    .pr_head > div{
+        margin-right: 16px;
     }
 `

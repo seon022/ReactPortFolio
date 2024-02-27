@@ -21,7 +21,7 @@ const ProjectStarbucks = ()=>{
                     </div>
                 <PrItemWrap>
                     <div>
-                        <p>프로젝트 소개</p>
+                        <p className="pr_subTitle">프로젝트 소개</p>
                         <p>내용</p>
                     </div>
                 </PrItemWrap>
@@ -48,9 +48,6 @@ const PrItemWrap = styled.div`
 
 const ProjectTitle = styled.div`
 margin-bottom: 30px;
-    .category{
-        margin-bottom: 6px;
-    }
     .pr_name{
         font-size: 24px;
         font-weight: 700;
