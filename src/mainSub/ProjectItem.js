@@ -44,11 +44,11 @@ const ItemWrap = styled.div`
         }
     .item.pc{
         padding: 40px 20px;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
     }
     .item.mo{
         padding: 20px 10px;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
     .pr_name{
         line-height: 1.6;

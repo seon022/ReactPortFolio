@@ -20,11 +20,12 @@ export default MainIntro;
 const IntroWrap = styled.div`
     max-width: 1480px;
     &.introWrap{
-        padding: 20px;
+        padding: 0 20px;
         margin: 0 auto 80px auto;
     }
     &.introWrap.intro_mb{
-        padding-top: 100px;
+        padding: 0 16px;
+        padding-top: 80px;
         margin: 0 auto 40px auto;
     }
 `

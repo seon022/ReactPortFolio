@@ -20,7 +20,7 @@ const BCWrap = styled.div`
     background-color: #fff;
     box-sizing: border-box;
     &.pc{
-        padding: 40px 10px 130px 20px;
+        padding: 40px 20px 130px 20px;
     }
     &.mo{
         padding: 40px 10px 80px 10px;

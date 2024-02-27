@@ -23,16 +23,17 @@ const Main2 = ()=>{
 export default Main2;
 
 const M2Wrap = styled.div`
-    padding: 0 20px;
+    max-width: 1480px;
     margin: 0 auto;
     margin-bottom: 60px;   
     border-radius: 20px;
-     max-width: 1480px;
     &.m2.pc_flex{
         display: flex;
         justify-content: center;
+        padding: 0 20px;
     }
     &.m2{
+        padding: 0 16px;
     }
 
 
