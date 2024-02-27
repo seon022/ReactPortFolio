@@ -44,10 +44,10 @@ const SkillWrap = styled.div`
     }
 
     .React{
-        background-color: skyblue;
+        background-color: #65A0E9;
     }
     .JavaScript{
-        background-color: lightcoral;
+        background-color: #EC9490;
     }
     .Styled-components{
         background-color: grey;
@@ -59,6 +59,6 @@ const SkillWrap = styled.div`
         background-color: grey;
     }
     .jQuery{
-        background-color: lightsalmon;
+        background-color: #2451A7;
     }
 `

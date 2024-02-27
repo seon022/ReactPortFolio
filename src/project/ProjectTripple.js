@@ -13,16 +13,40 @@ const ProjectTripple = ()=>{
                 <div className="pr_name">리액트 여행일정 앱</div>
             </ProjectTitle>
             <ProjectCont>
-                <div className="pr_time">
-                    <div className="pr_head">진행기간 </div>
+                <div className="pr_info">
                     <div>
-                        2024.01 - 2024.02
+                        <div className="pr_head">진행기간 </div>
+                        <div>
+                            2024.01 - 2024.02
+                        </div>
+                    </div>  
+                    <div className="pr_mem">
+                        <p className="pr_head">프로젝트 인원</p>
+                        <p>4명</p>
                     </div>
                 </div>
                 <PrItemWrap>
                     <div>
-                        <p>프로젝트 소개</p>
-                        <p>내용</p>
+                        <div>
+                            <p className="pr_subTitle">프로젝트 소개</p>
+                            <p>프로젝트 개요</p>
+                            <p>여행 일정 앱인 트리플을 참고하여, 추천 여행 코스를 볼 수 있고 여행일정을 짤 수 있는 기능을 모바일 사이즈 UI로 구현한 프로젝트입니다. 
+                            <br />    
+                            여행계획을 짜기 어려워하는 사용자를 타겟으로 
+                            <br />    
+                            여행 일정을 세우는 기능과 지난 여행계획을 볼 수 있는 기능을 구현하는 것을 주안점으로 두고 진행했습니다.
+                            <br />   
+                            또한 팀원들과 함께 피그마로 디자인 프로토타입을 구현하며 더 나은 UX를 위해 고민했습니다.
+                            </p>
+                        </div>
+                        <div>
+                            <p className="pr_head">
+                                구현기능
+                            </p>
+                            <p>
+                                여행 일정을 세우는 부분은 지역, 날짜를 선택하고, 사용자가 선택한 여행스타일 키워드에 따라 관광지를 보여주는 기능, 여행비용 기록, 메모 기록을 구현하고자 했습니다.
+                            </p>
+                        </div>
                     </div>
                 </PrItemWrap>
                 <ProjectSkill 
@@ -49,17 +73,19 @@ const PrItemWrap = styled.div`
 
 const ProjectTitle = styled.div`
     margin-bottom: 30px;
-    .category{
-        margin-bottom: 6px;
-    }
 `
 const ProjectCont = styled.div`
-  
-    .pr_time{
+    .pr_info{
+        margin-bottom: 30px;
+    }
+    .pr_info > div{
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
-    .pr_time > div{
+    .pr_head {
+        font-weight: 600;
     }
-
+    .pr_head > div{
+        margin-right: 16px;
+    }
 `

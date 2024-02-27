@@ -1,8 +1,9 @@
 
 
-import { useRef } from "react";
 import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
+import { Link } from "react-scroll";
+
 import BrowserContents from "../browserTem/BrowserContents";
 import TypingText from "../util/TypingText";
 
@@ -15,6 +16,9 @@ const MIContents= ()=> {
                     <div className="googleColor"><span className="letterBlue">S</span><span className="letterRed">e</span><span className="letterYellow">on</span><span className="letterBlue">Y</span><span className="letterGr">ou</span><span className="letterRed">ng</span></div>
                     <div className="typing">{<TypingText text="PORTFOLIO" speed={120} fontSize="34px" color="#222"  />}</div>
                 </div>
+                <Link to="aboutSection" spy={true} smooth={true} >
+                    <div className="goToAbout">아래로</div>
+                </Link>
                 <Skill className={isMobile? 'skill mo': 'skill'}>
                     <div className="skillIn">
                         <p className="html">html</p>
@@ -34,6 +38,7 @@ const MIContents= ()=> {
 export default MIContents;
 
 const MIWrap = styled.div`
+
 text-align: center;
 padding-top: 60px;
 &.about_mo{
@@ -68,6 +73,30 @@ padding-top: 60px;
     font-weight: 700;
     line-height: 40px;
 }
+.goToAbout{
+        position: absolute;
+        z-index: 1000;
+        top: 60%;
+        right: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: -20px;
+        border-radius: 50%;
+        text-indent: -9999px;
+        color: #222;
+        background-color: rgba(0,0,0,0.18);
+        background-image: url(img/icon-down-line.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        transition: 0.4s;
+    }
+    
+.goToAbout:hover{
+    transform: translateY(6px);
+    transition: 0.4s;
+}
+
 `
 const Skill = styled.div`
     position: absolute;

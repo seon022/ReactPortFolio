@@ -22,7 +22,6 @@ const SectionFiles = ()=> {
             : <span></span>}
             <Files className={!isMobile ? `files_pc ${sideQuick? 'onClick': ''}`: 'files_mo'}>
                 <div className={isMobile? "hideInMobile" : "close"} onClick={() => setSideQuick(false)}>Close</div>
-
                 <Link to="aboutSection" spy={true} smooth={true} >
                     <div className="index aboutMe">
                         <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
@@ -36,15 +35,23 @@ const SectionFiles = ()=> {
                         <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
                             <p className="cursor">click</p>
                         </div>
-                        <p>Project🌱</p>
+                        <p>Project 01</p>
                     </div>
                 </Link>
-                <Link to="EduSection" spy={true} smooth={true} >
-                    <div className="index Education">
+                <Link to="Project2" spy={true} smooth={true} >
+                    <div className="index Project">
                                 <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
                                     <p className="cursor">click</p>
                                 </div>
-                                <p>Education📖</p>
+                                <p>Project 02</p>
+                    </div>
+                </Link>
+                <Link to="Project3" spy={true} smooth={true} >
+                    <div className="index Project">
+                                <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
+                                    <p className="cursor">click</p>
+                                </div>
+                                <p>Project 03</p>
                     </div>
                 </Link>
             </Files>
@@ -95,7 +102,7 @@ const Files = styled.div`
     padding: 10px;
     color: #fff;
     text-align: center;
-    background-color: rgba(0,0,0 , 0.4);
+    background-color: rgba(0,0,0 , 0.2);
     transition: 0.6s;
     z-index: 1000;
     &.files_pc{
@@ -105,18 +112,14 @@ const Files = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 340px;
         font-size: 15px;
-        font-weight: 700;
+        font-weight: 600;
         border-radius: 10px 0 10px 10px;
     }
     &.files_pc.onClick{
         left: 0;
     }
     
-    &.files_pc > div{
-        margin: 0;
-    }
     &.files_pc > div:first-child{
         position: absolute;
         top: 22px;
@@ -126,7 +129,10 @@ const Files = styled.div`
         margin-bottom: 10px;
         border-radius: 10px 10px 0 0;
         transform: rotate(90deg);
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    &.files_pc .index{
+        margin-bottom: 30px;
     }
     .index:hover{
         cursor: pointer;
@@ -162,8 +168,8 @@ const Files = styled.div`
         justify-content: space-between;
         margin: 0 auto;
         padding: 0 10px 6px 10px;
-        font-size: 14px;
-        font-weight: 700;
+        font-size: 13px;
+        font-weight: 500;
         border-radius: 0 0 10px 10px;
     }
    
@@ -173,12 +179,12 @@ const Files = styled.div`
         text-indent: -9999px;
         background-image: url(img/icon-file.png);
         background-repeat: no-repeat;
-        background-size: 100%;
-        background-size: 52px 52px;
+        background-size: 100% auto;
+        background-size: 50px 50px;
         background-position: center;
     }
     .fileImg.mo{
-        background-size: 40px 40px;
+        background-size: 36px 36px;
     }
 
 `

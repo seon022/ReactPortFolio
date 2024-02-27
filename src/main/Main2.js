@@ -11,7 +11,7 @@ const Main2 = ()=>{
     const { isMobile } = useResponsiveApi();
 
     return(
-        <M2Wrap className={isMobile? 'm2': 'm2 pc_flex'} id="about">
+        <M2Wrap className={isMobile? 'm2': 'm2 pc_flex'} id="aboutSection">
             <Web style={Shadow} className={isMobile? 'webBox mo' : 'webBox'}>
                 <BrowserTop />
                 <M2Contents />
