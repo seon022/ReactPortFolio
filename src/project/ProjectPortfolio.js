@@ -3,20 +3,20 @@ import { useResponsiveApi } from "../context/responsive";
 import ProjectSkill from "../projectSub/ProjectSkill";
 import ProjectURL from "../projectSub/ProjectURL";
 
-const ProjectTripple = ()=>{
+const ProjectPortfolio = ()=>{
     const { isMobile } = useResponsiveApi();
 
     return(
         <div className={isMobile? 'item mo': 'item pc'}>
             <ProjectTitle>
-                <div className="category">팀 프로젝트</div>
-                <div className="pr_name">리액트 여행일정 앱</div>
+                <div className="category">개인 프로젝트</div>
+                <div className="pr_name">강선영 포트폴리오</div>
             </ProjectTitle>
             <ProjectCont>
                 <div className="pr_time">
                     <div className="pr_head">진행기간 </div>
                     <div>
-                        2024.01 - 2024.02
+                        2024.02 - 2024.02
                     </div>
                 </div>
                 <PrItemWrap>
@@ -31,17 +31,17 @@ const ProjectTripple = ()=>{
                     skill3={'Styled-components'}
                 />
                 <ProjectURL 
-                    githubURL = {'https://github.com/TeamC-Triple/team-c-triple.git'}
-                    webURL = {'https://team-c-triple.web.app/'}
+                    githubURL = {"https://github.com/seon022/ReactPortFolio.git"}
+                    webURL = {"https://ksy-portfolio.web.app"}
                 />
             </ProjectCont>
         </div>
     )
 }
-export default ProjectTripple;
+
+export default ProjectPortfolio;
 
 const PrItemWrap = styled.div`
-    margin-bottom: 20px;
     img{
         width: 100%;
     }
@@ -52,6 +52,10 @@ const ProjectTitle = styled.div`
     .category{
         margin-bottom: 6px;
     }
+    .pr_name{
+        font-size: 24px;
+        font-weight: 700;
+    }
 `
 const ProjectCont = styled.div`
   
@@ -61,5 +65,4 @@ const ProjectCont = styled.div`
     }
     .pr_time > div{
     }
-
 `
