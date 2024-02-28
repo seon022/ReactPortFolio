@@ -40,7 +40,7 @@ export default MIContents;
 const MIWrap = styled.div`
 
 text-align: center;
-padding-top: 60px;
+padding: 60px 0;
 &.about_mo{
     padding-top: 30px;
 }

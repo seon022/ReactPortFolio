@@ -21,9 +21,10 @@ const CircleWrap = styled.div`
     position: relative;
     display: inline-block;
     padding: 0 10px;
+    margin-left: 10px;
     ul{
         position: absolute;
-        left: 52%;
+        left: 50%;
         top: 0;
         display: flex;
         width: 100%;
@@ -41,17 +42,22 @@ const CircleWrap = styled.div`
         padding: 4px;
         background-color: #9FCBEA;
     }
-    li.narrow{
+    li.huge{
+        width: 30%;
+        margin: 0 -20px;
+    }
+    
+    li.project{
+        width: 34%;
+        margin: 0 -16px;
     }
     li.wide{
-        width: 26%;
+        width: 28%;
         margin: 0 -10px;
     }
     p {
         position: relative;
         line-height: 100%;
         color: #fff;
-        font-size: 19px;
-        font-weight: 500;
     }
 `

@@ -158,8 +158,8 @@ const Files = styled.div`
 
     &.files_mo{
         top: 0;
-        left: 20px;
-        right: 20px;
+        left: 16px;
+        right: 16px;
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
