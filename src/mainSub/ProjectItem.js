@@ -49,20 +49,44 @@ const ItemWrap = styled.div`
         padding: 30px 10px 20px 10px;
         margin-bottom: 50px;
     }
+    .pr_info{
+        margin-bottom:50px;
+    }
+    .pr_info > div{
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .pr_head {
+        display: block;
+        margin-right: 10px;
+        font-weight: 600;
+    }
+    .pr_head > div{
+        margin-right: 16px;
+    }
     .pr_name{
         line-height: 1.6;
         font-size: 24px;
         font-weight: 700;
     }
-    .pr_head{
-        margin-right: 10px;
-    }
     .pr_skills{
         margin-top: 40px;
     }
     .pr_subTitle{
+        margin-bottom: 20px;
+        margin-left: -6px;
+    }
+    .pr_outline{
         margin-bottom: 10px;
-        font-size: 20px;
         font-weight: 600;
+    }
+    .pr_photo{
+        max-width: 280px;
+        width: 30%;
+    }
+    .pr_ex{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
     }
 `

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
-import { useScrollApi } from "../context/scrollEvent";
 import { Shadow } from "../browserTem/Shadow";
 
 

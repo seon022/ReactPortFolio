@@ -22,32 +22,32 @@ const SectionFiles = ()=> {
             : <span></span>}
             <Files className={!isMobile ? `files_pc ${sideQuick? 'onClick': ''}`: 'files_mo'}>
                 <div className={isMobile? "hideInMobile" : "close"} onClick={() => setSideQuick(false)}>Close</div>
-                <Link to="aboutSection" spy={true} smooth={true} >
-                    <div className="index aboutMe">
+                <Link to="aboutSection" smooth={true} >
+                    <div className="index">
                         <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
                             <p className="cursor">click</p>
                         </div>
                         <p>About📌</p>
                     </div>
                 </Link>
-                <Link to="ProjectSection" spy={true} smooth={true} >
-                    <div className="index Project">
+                <Link to="ProjectSection" smooth={true} >
+                    <div className="index">
                         <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
                             <p className="cursor">click</p>
                         </div>
                         <p>Project 01</p>
                     </div>
                 </Link>
-                <Link to="Project2" spy={true} smooth={true} >
-                    <div className="index Project">
+                <Link to="Project2" smooth={true} >
+                    <div className="index">
                                 <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
                                     <p className="cursor">click</p>
                                 </div>
                                 <p>Project 02</p>
                     </div>
                 </Link>
-                <Link to="Project3" spy={true} smooth={true} >
-                    <div className="index Project">
+                <Link to="Project3" smooth={true} >
+                    <div className="index">
                                 <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
                                     <p className="cursor">click</p>
                                 </div>
@@ -131,22 +131,10 @@ const Files = styled.div`
         transform: rotate(90deg);
         background-color: rgba(0, 0, 0, 0.2);
     }
-    &.files_pc .index{
-        margin-bottom: 30px;
-    }
-    .index:hover{
-        cursor: pointer;
-        scale: 1.05;
-        right: 12px;
-        top: 20px;
-    }
-    .index:hover .cursor{
-        opacity: 1;
-    }
     .cursor{
-        opacity: 0;
+        display: none;
         position: absolute;
-        right: 12px;
+        right: -2px;
         top: 20px;
         width: 30px;
         height: 30px;
@@ -157,8 +145,16 @@ const Files = styled.div`
         background-position: center;
         z-index: 300;
         transition: 0.2s;
+    }  
+    .index{
+        margin-bottom: 20px;
+    } 
+    &.files_mo .index{
+        margin-bottom: 0;
+    } 
+    .index:hover .cursor{
+        display: block;
     }
-
 
     &.files_mo{
         top: 0;
@@ -174,6 +170,7 @@ const Files = styled.div`
     }
    
     .fileImg{
+        position: relative;
         width: 100%;
         height: 54px;
         text-indent: -9999px;

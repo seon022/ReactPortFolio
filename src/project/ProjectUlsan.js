@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
 import ProjectURL from "../projectSub/ProjectURL";
 import ProjectSkill from "../projectSub/ProjectSkill";
+import Circlebg from "../util/Circlebg";
 
 const ProjectUlsan = ()=>{
     const { isMobile } = useResponsiveApi();
@@ -21,7 +22,7 @@ const ProjectUlsan = ()=>{
                 </div>
                 <PrItemWrap>
                     <div>
-                        <p className="pr_subTitle">프로젝트 소개</p>
+                        <div className="pr_subTitle"><Circlebg  type={'wide'} >프로젝트 소개</Circlebg></div>
                         <p>내용</p>
                     </div>
                 </PrItemWrap>
