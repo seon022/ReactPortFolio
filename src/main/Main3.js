@@ -10,7 +10,7 @@ const Main3 = ()=>{
     const { isMobile } = useResponsiveApi();
 
     return(
-        <M3Wrap className={isMobile? 'm2': 'm2 pc_flex'} id="aboutSection">
+        <M3Wrap className={isMobile? 'm2': 'm2 pc_flex'}>
             <Web style={Shadow} className={isMobile? 'webBox mo' : 'webBox'}>
                 <BrowserTop />
                 <M3Contents />
@@ -29,10 +29,10 @@ const M3Wrap = styled.div`
     &.m2.pc_flex{
         display: flex;
         justify-content: center;
-        padding: 0 20px;
+        padding: 80px 20px 0 20px;
     }
     &.m2{
-        padding: 0 16px;
+        padding: 80px 16px 0 16px;
     }
 
 

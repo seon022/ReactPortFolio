@@ -12,7 +12,7 @@ const ProjectPortfolio = ()=>{
     return(
         <div className={isMobile? 'item mo': 'item pc'} id="Project2">
             <div className="item_In">
-                <ProjectCont>
+                <ProjectCont className="item_wrap">
                     <div className="contentFlex">
                         <PrItemWrap className="contentTxt narr">
                             <ProjectTitle>
