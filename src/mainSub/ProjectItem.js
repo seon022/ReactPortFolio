@@ -110,4 +110,8 @@ const ItemWrap = styled.div`
         border-radius: 10px;
         overflow: hidden;
     }
+    .pr_explain{
+        margin-bottom: 20px;
+    }
+
 `

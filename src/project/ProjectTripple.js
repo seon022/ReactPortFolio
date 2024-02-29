@@ -49,12 +49,16 @@ const ProjectTripple = ()=>{
                                         <p className="pr_head">
                                             기능
                                         </p>
-                                        <p>사용자가 선택한 여행스타일 키워드에 따라 관광지 선택</p>
-                                        <p>여행 일정 저장</p>
-                                        <p>여행 일정 저장</p>
+                                        <p>사용자가 선택한 여행스타일 키워드에 따라 관광지 필터링</p>
+                                        <p>여행 일정 CRUD</p>
+                                        <p>지난 여행기록 보기</p>
+                                    </div>
+                                    <div className="pr_explain">
                                         <p className="pr_head">
-                                            아쉬운 점& 교훈
+                                            후기
                                         </p>
+                                        <p>React로 처음 진행한 프로젝트이기에 Props drilling을 경험하며 Context API를 사용할 데이터를 결정하여 구조의 복잡성을 줄이려 노력했습니다.</p>
+                                        <p>UI만 구현해보고 서버를 구축하지 못 해서 아쉬운 점이 있습니다. 또, 학습한 기술을 프로젝트에 직접 사용하며 개발을 위해 구조를 계획하는 것의 중요성을 배웠습니다.</p>
                                     </div>
                                 </div>
                         </PrItemWrap>
