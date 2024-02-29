@@ -7,8 +7,10 @@
 🚀Install
 
  ⭐ React
-	npx create-react-app .
+ 
+ 	npx create-react-app .
 
  
  ⭐ react-scroll
-  	npm i react-scroll
+
+	npm i react-scroll
