@@ -2,12 +2,13 @@ import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
 import ProjectSkill from "../projectSub/ProjectSkill";
 import ProjectURL from "../projectSub/ProjectURL";
+import Circlebg from "../util/Circlebg";
 
 const ProjectStarbucks = ()=>{
     const { isMobile } = useResponsiveApi();
 
     return(
-        <div className={isMobile? 'item mo': 'item pc'}>
+        <div className={isMobile? 'item mo': 'item pc'} id="Project3">
                 <ProjectTitle>
                     <div className="category">개인 프로젝트</div>
                     <div className="pr_name">스타벅스 홈페이지 UI 구현</div>
@@ -21,7 +22,7 @@ const ProjectStarbucks = ()=>{
                     </div>
                 <PrItemWrap>
                     <div>
-                        <p className="pr_subTitle">프로젝트 소개</p>
+                        <div className="pr_subTitle"><Circlebg  type={'wide'} >프로젝트 소개</Circlebg></div>
                         <p>내용</p>
                     </div>
                 </PrItemWrap>

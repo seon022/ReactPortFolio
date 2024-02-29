@@ -10,7 +10,7 @@ const TypingText = ({text, speed, fontSize, color}) => {
 
   useEffect(() => {
     let typingText = text ? text : "";//기본값
-    let typingSpeed = speed ? speed : 200;//기본값
+    let typingSpeed = speed ? speed : 300;//기본값
     const interval = setInterval(() => {
         setText((Text)=>{
           let updated = Text;

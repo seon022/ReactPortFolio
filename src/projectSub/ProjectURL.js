@@ -43,7 +43,6 @@ const URLWrap = styled.div`
         box-sizing: border-box;
         padding: 10px 10px 6px 34px;
         background-repeat: no-repeat;
-        background-position: left 8px top 8px;
         color: #222;
         overflow: hidden;
         white-space: nowrap;
@@ -52,10 +51,12 @@ const URLWrap = styled.div`
     }
     .projectURL .github a{
         background-size: 24px auto;
+        background-position: left 8px top 8px;
         background-image: url(img/icons8-github.svg);
     }
     .projectURL .projectSite a{
         background-size: 22px auto;
+        background-position: left 8px top 10px;
         background-image: url(img/icons8-home.png);
     }
 `

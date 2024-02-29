@@ -40,7 +40,7 @@ export default MIContents;
 const MIWrap = styled.div`
 
 text-align: center;
-padding-top: 60px;
+padding: 60px 0;
 &.about_mo{
     padding-top: 30px;
 }
@@ -84,7 +84,7 @@ padding-top: 60px;
         border-radius: 50%;
         text-indent: -9999px;
         color: #222;
-        background-color: rgba(0,0,0,0.18);
+        background-color: rgba(0,0,0, 0.2);
         background-image: url(img/icon-down-line.svg);
         background-position: center;
         background-repeat: no-repeat;

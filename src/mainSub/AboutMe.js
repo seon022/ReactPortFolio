@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
+import Circlebg from "../util/Circlebg";
 
 const AboutMe =()=> {
     const { isMobile } = useResponsiveApi();
@@ -7,13 +8,14 @@ const AboutMe =()=> {
         <AboutWrap className={isMobile? "about_mo": ""}>
             <MyTitle>
                 <div className={isMobile? "title": "title pc"}>
-                    About Me
+                    <Circlebg type={'huge'} >About Me</Circlebg>
                 </div>
-                <div className="titleTxt">안녕하세요, <br /><span>🌱꾸준히 성장하는 프론트엔드 개발자를 꿈꾸는 강선영입니다.🌳</span></div>
+                <div className="titleTxt">안녕하세요, <br /><span>꾸준히 성장하는 프론트엔드 개발자를  <br />꿈꾸는 강선영입니다.</span></div>
+                
+                <MyGoal>
+                    새로운 것을 기술로 구현해보는 것을 좋아합니다.
+                </MyGoal>
             </MyTitle>
-            <MyGoal>
-                새로운 것을 기술로 구현해보는 것을 좋아합니다.
-            </MyGoal>
         </AboutWrap>
     )
 }
@@ -30,28 +32,26 @@ const AboutWrap  = styled.div`
 `
 
 const MyTitle= styled.div`
+    text-align: center;
     margin: 0 20px;
-    margin-bottom: 30px;
     font-size: 30px;
     font-weight: 900;
     line-height: 1.6;
     .title{
-        font-size: 8vw;
+        font-size: 50px;
         margin-bottom: 30px;
     }
     .title.pc{
-        margin-left: 10px;
         font-size: 60px;
     }
     .titleTxt{
-    margin-bottom: 40px;
-    font-size: 22px;
-    }
+        margin-bottom: 40px;
+        font-size: 22px;
+        color: #444;
+        }
 `
 const MyGoal= styled.div`
-    margin: 0 20px;
-    margin-bottom: 60px;
     font-size: 18px;
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.4;
 `

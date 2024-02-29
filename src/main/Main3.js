@@ -4,24 +4,24 @@ import { Shadow } from "../browserTem/Shadow";
 
 
 import BrowserTop from "../browserTem/BrowserTop";
-import M2Contents from "../mainSub/M2Contents";
+import M3Contents from "../mainSub/M3Contents";
 
-const Main2 = ()=>{
+const Main3 = ()=>{
     const { isMobile } = useResponsiveApi();
 
     return(
-        <M2Wrap className={isMobile? 'm2': 'm2 pc_flex'} id="aboutSection">
+        <M3Wrap className={isMobile? 'm2': 'm2 pc_flex'} id="aboutSection">
             <Web style={Shadow} className={isMobile? 'webBox mo' : 'webBox'}>
                 <BrowserTop />
-                <M2Contents />
+                <M3Contents />
             </Web>
-        </M2Wrap>
+        </M3Wrap>
     )
 }
 
-export default Main2;
+export default Main3;
 
-const M2Wrap = styled.div`
+const M3Wrap = styled.div`
     max-width: 1480px;
     margin: 0 auto;
     margin-bottom: 60px;   
