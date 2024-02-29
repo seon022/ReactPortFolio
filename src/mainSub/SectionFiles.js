@@ -35,7 +35,7 @@ const SectionFiles = () => {
                         <p>About📌</p>
                     </div>
                 </Link>
-                <Link to="ProjectSection" smooth={true}>
+                <Link to="Project1" smooth={true}>
                     <div className="index">
                         <div className={isMobile ? 'fileImg mo' : 'fileImg'}>
                             파일

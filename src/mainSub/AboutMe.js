@@ -11,9 +11,8 @@ const AboutMe = () => {
                     <Circlebg type={'huge'}>About Me</Circlebg>
                 </div>
                 <div className="titleTxt">
-                    안녕하세요, 강선영입니다.
-                    <br />
-                    <p>
+                    <p className="hello">안녕하세요, 강선영입니다.</p>
+                    <p className="overview">
                         상상한 아이디어를 구현하는 과정이 재밌습니다. <br />
                         실패에 굴하지 않고 꾸준히 성장하는 개발자로 일하고 싶습니다.
                     </p>
@@ -44,20 +43,19 @@ const MyTitle = styled.div`
     font-size: 30px;
     font-weight: 900;
     line-height: 1.6;
+    .titleTxt {
+        margin-bottom: 40px;
+    }
     .title {
         font-size: 50px;
         margin-bottom: 30px;
     }
-    .title.pc {
-        font-size: 60px;
-    }
-    .titleTxt {
-        margin-bottom: 40px;
+    .hello {
+        margin-bottom: 20px;
         font-size: 28px;
         color: #444;
     }
-
-    .titleTxt p {
+    .overview {
         font-size: 18px;
     }
 `;
