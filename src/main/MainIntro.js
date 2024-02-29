@@ -21,6 +21,7 @@ const IntroWrap = styled.div`
     max-width: 1480px;
     &.introWrap{
         padding: 0 20px;
+        padding-top: 50px;
         margin: 0 auto 60px auto;
     }
     &.introWrap.intro_mb{

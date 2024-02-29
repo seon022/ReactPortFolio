@@ -14,7 +14,7 @@ const ProjectPortfolio = ()=>{
             <div className="item_In">
                 <ProjectCont>
                     <div className="contentFlex">
-                        <PrItemWrap className="contentTxt">
+                        <PrItemWrap className="contentTxt narr">
                             <ProjectTitle>
                                 <div className="category">개인 프로젝트</div>
                                 <div className="pr_name">강선영 포트폴리오</div>
@@ -38,8 +38,7 @@ const ProjectPortfolio = ()=>{
                                             프로젝트 개요
                                         </p>
                                         <p>
-                                            지금까지 작업한 작업물들을 보여주기 위한 프로젝트입니다.
-                                            React를 이용하여 작업하여
+                                            지금까지 작업한 작업물들을 보여주기 위한 프로젝트입니다. 웹 사이트 디자인부터 구성하고 구조를 계획하며 제가 원하는 UI를 구현한 프로젝트입니다.
                                         </p>
                                     </div>
                                     <div className="pr_explain">
@@ -47,13 +46,20 @@ const ProjectPortfolio = ()=>{
                                             기능
                                         </p>
                                         <p>
-                                            
+                                           스크롤 이동, 캐러셀, 반응형 웹
+                                        </p>
+                                    </div>
+                                    <div className="pr_explain">
+                                        <p className="pr_head">
+                                            후기
+                                        </p>
+                                        <p>
+                                            React를 이용하여 작업하며 반복되는 요소를 효율적으로 관리하려 노력했습니다.
                                         </p>
                                     </div>
                                 </div>
                         </PrItemWrap>
-                        {!isMobile? <div className="pr_photo"><SlickSlider data={portfolioPhoto} /></div>
-                        : <span></span>}
+                        <div className="pr_photo wide"><SlickSlider data={portfolioPhoto} /></div>
                         
                     </div>
                     <ProjectSkill 
