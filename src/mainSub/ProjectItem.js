@@ -17,8 +17,10 @@ const ProjectItem = ()=>{
                 <ProjectTripple />
                 <ProjectPortfolio />
                 <ProjectMuseum />
-                <ProjectStarbucks />
-                <ProjectUlsan />
+                <div className={!isMobile? "project3_Wrap" : ""}>
+                    <ProjectStarbucks />
+                    <ProjectUlsan />
+                </div>
             </ItemWrap>
         </ProjectWrap>
     )
@@ -35,6 +37,13 @@ const ProjectWrap = styled.div`
 `
 const ItemWrap = styled.div`
     box-sizing: border-box;
+    .project3_Wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    .project3_Wrap .item.pc{
+        width: 49%;
+    }
     .item{
         box-sizing: border-box;
         width: 100%;
@@ -67,9 +76,19 @@ const ItemWrap = styled.div`
     .item.pc .contentTxt{
         width: 64%;
     }
+    .item.pc .contentTxt.narr{
+        width: 50%;
+    }
+    .item.pc .contentTxt.p3{
+        width: 100%;
+    }
     .item.pc .contentFlex{
         display: flex;
         justify-content: space-between;
+    }
+    .item.mo .contentFlex{
+        display: block;
+        position: relative;
     }
     .pr_head {
         display: block;
@@ -103,12 +122,35 @@ const ItemWrap = styled.div`
         margin-bottom: 30px;
     }
     .pr_photo{
-        padding: 30px 0;
+        padding: 30px 10px;
+        margin-top: 40px;
         width: 30%;
-        max-width: 280px;
+        max-height: 580px;
+        max-width: 260px;
+        margin-left: 10px;
         border: 1px solid #ccc;
-        border-radius: 10px;
+        border-radius: 20px;
         overflow: hidden;
+    }
+    .item.mo .pr_photo{
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .pr_photo.p3{   
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .pr_photo.wide{
+        margin-top: 60px;
+        max-width: 500px;
+        max-height: 260px;
+        border: transparent;
+        width: 60%;
+    }
+    .pr_photo img{
+        width: 100%;
+        height: auto;
     }
     .pr_explain{
         margin-bottom: 20px;

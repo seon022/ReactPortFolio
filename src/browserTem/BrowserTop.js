@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { useResponsiveApi } from "../context/responsive";
 
+
 const BrowserTop = ()=> {
     const { isMobile } = useResponsiveApi();
 
+    const gotoTop =()=>{
+        window.scrollTo({ top: 0, behavior:'smooth' });
+    }
     return(
         <BrowTop>
             <Tap>
@@ -13,7 +17,7 @@ const BrowserTop = ()=> {
                     <p className="green">gr</p>
                 </Dots>
                 <NowTap>
-                    {isMobile? <p>FRONT-END</p> : <p>FRONT-END DEVELOPER</p>}
+                    {isMobile? <p>PORTFOLIO</p> : <p>강선영의 PORTFOLIO</p>}
                     <p className="tapclose">닫기</p>
                 </NowTap>
                 <div className="tapPlus">plus</div>
@@ -21,7 +25,7 @@ const BrowserTop = ()=> {
             <AddressBar>
                 <BarLeftWrap>
                     {isMobile? 
-                        <div className="barLeft">
+                        <div className="barLeft" onClick={gotoTop}>
                             <p className="back">back</p>
                         </div>
                         : <div className="barLeft">
@@ -33,7 +37,7 @@ const BrowserTop = ()=> {
                     }
                     <AddressBox>
                         <p className="pageInfo">pageInfo</p>
-                        <div className="addressLetter">developer/강선영</div>
+                        <div className="addressLetter">frontend/강선영</div>
                         <p className={isMobile? "zoom hideInMobile" :"zoom" }>zoom</p>
                         <p className={isMobile? "bookmark hideInMobile": "bookmark" }>bookmark</p>
                     </AddressBox>

@@ -11,7 +11,7 @@ const MIContents= ()=> {
     const { isMobile } = useResponsiveApi();
     return(
         <BrowserContents>
-            <MIWrap className={isMobile? "about_mo": ""}>
+            <MIWrap className={isMobile? "about_mo": ""} id="introPage">
                 <div className="titleWrap">
                     <div className="googleColor"><span className="letterBlue">S</span><span className="letterRed">e</span><span className="letterYellow">on</span><span className="letterBlue">Y</span><span className="letterGr">ou</span><span className="letterRed">ng</span></div>
                     <div className="typing">{<TypingText text="PORTFOLIO" speed={120} fontSize="34px" color="#222"  />}</div>
