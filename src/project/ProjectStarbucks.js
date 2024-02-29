@@ -10,7 +10,7 @@ const ProjectStarbucks = ()=>{
     const { isMobile } = useResponsiveApi();
 
     return(
-        <div className={isMobile? 'item mo': 'item pc'} id="Project3">
+        <div className={isMobile? 'item mo': 'item pc'} id="">
             <div className="item_In">
                 <ProjectCont>
                     <div className="contentFlex">
@@ -52,7 +52,7 @@ const ProjectStarbucks = ()=>{
                                 </div>
                         </PrItemWrap>
                     </div>
-                    <div className="pr_photo wide p3"><SlickSlider data={starbucksPhoto} /></div>
+                    <div className="pr_photo p3"><SlickSlider data={starbucksPhoto} /></div>
                     <ProjectSkill 
                         skill1={'jQuery'}
                         skill2={'HTML'}
