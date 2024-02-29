@@ -11,7 +11,7 @@ const ProjectItem = ()=>{
     const { isMobile } = useResponsiveApi();
 
     return(
-        <ProjectWrap id="ProjectSection">
+        <ProjectWrap id="Project1">
             <div className="project"><Circlebg type={'project'} >Project</Circlebg></div>
             <ItemWrap>
                 <ProjectTripple />
@@ -52,19 +52,23 @@ const ItemWrap = styled.div`
         background-color: #fff;
         }
     .item.pc{
-        padding: 50px 20px 40px 20px;
-        margin-bottom: 60px;
+        padding: 80px 20px 60px 20px;
+        margin-top: 60px;
+    }
+    .item.pc.tripple{
+        padding: 60px 20px 40px 20px;
+        margin-top: 60px;
     }
     .item.mo{
         padding: 30px 10px 20px 10px;
-        margin-bottom: 50px;
+        margin-top: 60px;
     }
     .item_In{
         max-width: 1240px;
         margin: 0 auto;
     }
     .pr_info{
-        margin-bottom:50px;
+        margin-bottom:30px;
     }
     .pr_info > div{
         display: flex;
@@ -104,9 +108,6 @@ const ItemWrap = styled.div`
         font-size: 24px;
         font-weight: 700;
     }
-    .pr_skills{
-        margin-top: 40px;
-    }
     .pr_subTitle{
         margin-bottom: 20px;
         margin-left: -6px;
@@ -140,12 +141,13 @@ const ItemWrap = styled.div`
     .pr_photo.p3{   
         margin: 0 auto;
         margin-top: 40px;
+        max-width: 600px;
+        width: 80%;
     }
     .pr_photo.wide{
         margin-top: 60px;
         max-width: 500px;
-        max-height: 260px;
-        border: transparent;
+        max-height: 310px;
         width: 60%;
     }
     .pr_photo img{

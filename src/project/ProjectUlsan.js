@@ -52,7 +52,7 @@ const ProjectUlsan = ()=>{
                                 </div>
                         </PrItemWrap>
                     </div>
-                    <div className="pr_photo wide p3"><SlickSlider data={ulsanPhoto} /></div>
+                    <div className="pr_photo p3"><SlickSlider data={ulsanPhoto} /></div>
                     <ProjectSkill 
                         skill1={'jQuery'}
                         skill2={'HTML'}

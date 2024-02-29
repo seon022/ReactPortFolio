@@ -23,6 +23,7 @@ const IntroWrap = styled.div`
         padding: 0 20px;
         padding-top: 50px;
         margin: 0 auto 60px auto;
+        margin-bottom: 20px;
     }
     &.introWrap.intro_mb{
         padding: 0 16px;

@@ -10,7 +10,7 @@ const AboutMe =()=> {
                 <div className={isMobile? "title": "title pc"}>
                     <Circlebg type={'huge'} >About Me</Circlebg>
                 </div>
-                <div className="titleTxt">안녕하세요, <br /><span>꾸준히 성장하는 프론트엔드 개발자를  <br />꿈꾸는 강선영입니다.</span></div>
+                <div className="titleTxt">안녕하세요, <br /><span>꾸준히 성장하는 프론트엔드 개발자를 꿈꾸는 강선영입니다.</span></div>
                 
                 <MyGoal>
                     새로운 것을 기술로 구현해보는 것을 좋아합니다.
