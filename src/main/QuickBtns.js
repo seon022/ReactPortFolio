@@ -30,7 +30,7 @@ const QuickWrap = styled.div`
     }
     .gotoTop{
         position: fixed;
-        right: 40px;
+        right: 20px;
         bottom: 40px;
         width: 56px;
         height: 56px;

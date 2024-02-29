@@ -11,7 +11,7 @@ const ProjectTripple = ()=>{
     const { isMobile } = useResponsiveApi();
 
     return(
-        <div className={isMobile? 'item mo': 'item pc tripple'}>
+        <div className={isMobile? 'item mo': 'item pc tripple'} id="Project1">
             <div className="item_In">
                 <ProjectCont>
                     <div className="contentFlex">
