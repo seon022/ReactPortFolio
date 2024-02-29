@@ -1,34 +1,37 @@
-import styled from "styled-components";
-import { useResponsiveApi } from "../context/responsive";
+import styled from 'styled-components';
+import { useResponsiveApi } from '../context/responsive';
 
-const ProjectURL = ({ githubURL, webURL })=>{
+const ProjectURL = ({ githubURL, webURL }) => {
     const { isMobile } = useResponsiveApi();
-    return(
+    return (
         <URLWrap>
-            <div className={isMobile? "projectURL" : "projectURL pc"}>
+            <div className={isMobile ? 'projectURL' : 'projectURL pc'}>
                 <p className="github">
-                    <a href={githubURL} target="_blank">{githubURL}</a>
+                    <a href={githubURL} target="_blank">
+                        {githubURL}
+                    </a>
                 </p>
                 <p className="projectSite">
-                    <a href={webURL} target="_blank">{webURL}</a>
+                    <a href={webURL} target="_blank">
+                        {webURL}
+                    </a>
                 </p>
             </div>
         </URLWrap>
-    )
-
-}
+    );
+};
 export default ProjectURL;
 
 const URLWrap = styled.div`
     width: 100%;
-    .projectURL{
+    .projectURL {
         font-size: 15px;
     }
-    .projectURL.pc p{
+    .projectURL.pc p {
         display: inline-block;
         margin-right: 10px;
     }
-    .projectURL p{
+    .projectURL p {
         height: 40px;
         margin-bottom: 10px;
         overflow: hidden;
@@ -38,7 +41,7 @@ const URLWrap = styled.div`
         background-color: rgba(0, 0, 0, 0.1);
         border-radius: 20px;
     }
-    .projectURL a{
+    .projectURL a {
         display: block;
         box-sizing: border-box;
         padding: 10px 10px 6px 34px;
@@ -49,14 +52,14 @@ const URLWrap = styled.div`
         text-overflow: ellipsis;
         word-break: break-all;
     }
-    .projectURL .github a{
+    .projectURL .github a {
         background-size: 24px auto;
         background-position: left 8px top 8px;
         background-image: url(img/icons8-github.svg);
     }
-    .projectURL .projectSite a{
+    .projectURL .projectSite a {
         background-size: 22px auto;
         background-position: left 8px top 10px;
         background-image: url(img/icons8-home.png);
     }
-`
+`;

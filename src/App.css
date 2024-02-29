@@ -1,18 +1,17 @@
 @charset "utf-8";
 /* App.css */
 
-.hideInMobile{
-  display: none;
+.hideInMobile {
+    display: none;
 }
 
-
-.App{
+.App {
     padding: 20px 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../public/img/skybg.jpg);
     background-position: center;
 }
-.gnbLeft{
-  margin-left: 20px;
+.gnbLeft {
+    margin-left: 20px;
 }

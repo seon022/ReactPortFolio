@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const Circlebg = ({children, type} )=>{
-    return(
+const Circlebg = ({ children, type }) => {
+    return (
         <CircleWrap>
             <ul>
                 <li className={type}></li>
@@ -12,17 +12,16 @@ const Circlebg = ({children, type} )=>{
             </ul>
             <p>{children}</p>
         </CircleWrap>
-    )
-}
+    );
+};
 export default Circlebg;
 
 const CircleWrap = styled.div`
-
     position: relative;
     display: inline-block;
     padding: 0 10px;
     margin-left: 10px;
-    ul{
+    ul {
         position: absolute;
         left: 50%;
         top: 0;
@@ -35,23 +34,23 @@ const CircleWrap = styled.div`
         background: none;
         transform: translateX(-50%);
     }
-    li{
+    li {
         display: block;
         height: 120%;
         border-radius: 100%;
         padding: 4px;
-        background-color: #9FCBEA;
+        background-color: #9fcbea;
     }
-    li.huge{
+    li.huge {
         width: 30%;
         margin: 0 -20px;
     }
-    
-    li.project{
+
+    li.project {
         width: 34%;
         margin: 0 -16px;
     }
-    li.wide{
+    li.wide {
         width: 28%;
         margin: 0 -10px;
     }
@@ -60,4 +59,4 @@ const CircleWrap = styled.div`
         line-height: 100%;
         color: #fff;
     }
-`
+`;

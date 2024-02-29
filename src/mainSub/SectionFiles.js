@@ -1,73 +1,89 @@
+import styled from 'styled-components';
+import { useResponsiveApi } from '../context/responsive';
+import { Link } from 'react-scroll';
+import { useRef, useState } from 'react';
 
-import styled from "styled-components";
-import { useResponsiveApi } from "../context/responsive";
-import { Link } from "react-scroll";
-import { useRef, useState } from "react";
-
-const SectionFiles = ()=> {
+const SectionFiles = () => {
     const { isMobile } = useResponsiveApi();
     const [sideQuick, setSideQuick] = useState(false);
     const gotoRef = useRef();
 
-    const clickGoTo = ()=>{
+    const clickGoTo = () => {
         setSideQuick(true);
-    }
+    };
 
-    return(
+    return (
         <div>
-            {!isMobile? <Folder onClick={clickGoTo} className={ sideQuick? 'clicked': 'popAni' } ref={gotoRef}>
-                            <p>Click!</p>
-                            <p>GoTo</p>
-                        </Folder> 
-            : <span></span>}
-            <Files className={!isMobile ? `files_pc ${sideQuick? 'onClick': ''}`: 'files_mo'}>
-                <div className={isMobile? "hideInMobile" : "close"} onClick={() => setSideQuick(false)}>Close</div>
-                <Link to="aboutSection" smooth={true} >
+            {!isMobile ? (
+                <Folder onClick={clickGoTo} className={sideQuick ? 'clicked' : 'popAni'} ref={gotoRef}>
+                    <p>Click!</p>
+                    <p>GoTo</p>
+                </Folder>
+            ) : (
+                <span></span>
+            )}
+            <Files className={!isMobile ? `files_pc ${sideQuick ? 'onClick' : ''}` : 'files_mo'}>
+                <div className={isMobile ? 'hideInMobile' : 'close'} onClick={() => setSideQuick(false)}>
+                    Close
+                </div>
+                <Link to="aboutSection" smooth={true}>
                     <div className="index">
-                        <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
+                        <div className={isMobile ? 'fileImg mo' : 'fileImg'}>
+                            파일
                             <p className="cursor">click</p>
                         </div>
                         <p>About📌</p>
                     </div>
                 </Link>
-                <Link to="ProjectSection" smooth={true} >
+                <Link to="ProjectSection" smooth={true}>
                     <div className="index">
-                        <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
+                        <div className={isMobile ? 'fileImg mo' : 'fileImg'}>
+                            파일
                             <p className="cursor">click</p>
                         </div>
                         <p>Project 01</p>
                     </div>
                 </Link>
-                <Link to="Project2" smooth={true} >
+                <Link to="Project2" smooth={true}>
                     <div className="index">
-                                <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
-                                    <p className="cursor">click</p>
-                                </div>
-                                <p>Project 02</p>
+                        <div className={isMobile ? 'fileImg mo' : 'fileImg'}>
+                            파일
+                            <p className="cursor">click</p>
+                        </div>
+                        <p>Project 02</p>
                     </div>
                 </Link>
-                <Link to="Project3" smooth={true} >
+                <Link to="Project3" smooth={true}>
                     <div className="index">
-                                <div className={ isMobile? "fileImg mo" : "fileImg"}>파일
-                                    <p className="cursor">click</p>
-                                </div>
-                                <p>Project 03</p>
+                        <div className={isMobile ? 'fileImg mo' : 'fileImg'}>
+                            파일
+                            <p className="cursor">click</p>
+                        </div>
+                        <p>Project 03</p>
                     </div>
                 </Link>
             </Files>
         </div>
     );
-}
+};
 
 export default SectionFiles;
 
 const Folder = styled.div`
     @keyframes PopAni {
-        0% {transform: translate(0);}
-        25% {transform: translate(8px);}
-        50% {transform: translate(0);}
-        75% {transform: translate(8px);}
-    };
+        0% {
+            transform: translate(0);
+        }
+        25% {
+            transform: translate(8px);
+        }
+        50% {
+            transform: translate(0);
+        }
+        75% {
+            transform: translate(8px);
+        }
+    }
     position: fixed;
     left: -10px;
     top: 40px;
@@ -79,21 +95,21 @@ const Folder = styled.div`
     line-height: 1.2;
     color: #fff;
     text-align: center;
-    background-color: rgba(0,0,0 , 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 0 10px 10px 0;
     z-index: 1000;
     transition: 0.4s;
     cursor: pointer;
-    &.clicked{
+    &.clicked {
         left: -100%;
     }
     &.popAni:hover {
         scale: 1.05;
     }
-    &.popAni{
+    &.popAni {
         animation: PopAni 1.4s 2;
     }
-`
+`;
 
 const Files = styled.div`
     cursor: pointer;
@@ -102,10 +118,10 @@ const Files = styled.div`
     padding: 10px;
     color: #fff;
     text-align: center;
-    background-color: rgba(0,0,0 , 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     transition: 0.6s;
     z-index: 1000;
-    &.files_pc{
+    &.files_pc {
         top: 40px;
         left: -100%;
         width: 100px;
@@ -116,11 +132,11 @@ const Files = styled.div`
         font-weight: 600;
         border-radius: 10px 0 10px 10px;
     }
-    &.files_pc.onClick{
+    &.files_pc.onClick {
         left: 0;
     }
-    
-    &.files_pc > div:first-child{
+
+    &.files_pc > div:first-child {
         position: absolute;
         top: 22px;
         right: -58px;
@@ -131,7 +147,7 @@ const Files = styled.div`
         transform: rotate(90deg);
         background-color: rgba(0, 0, 0, 0.2);
     }
-    .cursor{
+    .cursor {
         display: none;
         position: absolute;
         right: -2px;
@@ -145,18 +161,18 @@ const Files = styled.div`
         background-position: center;
         z-index: 300;
         transition: 0.2s;
-    }  
-    .index{
+    }
+    .index {
         margin-bottom: 20px;
-    } 
-    &.files_mo .index{
+    }
+    &.files_mo .index {
         margin-bottom: 0;
-    } 
-    .index:hover .cursor{
+    }
+    .index:hover .cursor {
         display: block;
     }
 
-    &.files_mo{
+    &.files_mo {
         top: 0;
         left: 16px;
         right: 16px;
@@ -168,8 +184,8 @@ const Files = styled.div`
         font-weight: 500;
         border-radius: 0 0 10px 10px;
     }
-   
-    .fileImg{
+
+    .fileImg {
         position: relative;
         width: 100%;
         height: 54px;
@@ -180,8 +196,7 @@ const Files = styled.div`
         background-size: 50px 50px;
         background-position: center;
     }
-    .fileImg.mo{
+    .fileImg.mo {
         background-size: 36px 36px;
     }
-
-`
+`;

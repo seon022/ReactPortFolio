@@ -1,12 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const ProjectSkill = ({skill1, skill2, skill3, skill4})=> {
-    return(
+const ProjectSkill = ({ skill1, skill2, skill3, skill4 }) => {
+    return (
         <SkillWrap>
             <div className="pr_skills">
-                <div className="pr_head">
-                    skills
-                </div>
+                <div className="pr_head">skills</div>
                 <div className="skillBox">
                     <p className={skill1}>{skill1}</p>
                     <p className={skill2}>{skill2}</p>
@@ -16,26 +14,25 @@ const ProjectSkill = ({skill1, skill2, skill3, skill4})=> {
             </div>
         </SkillWrap>
     );
-}
+};
 export default ProjectSkill;
 
 const SkillWrap = styled.div`
-
-    .pr_skills{
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-    .pr_head{
+    .pr_skills {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .pr_head {
         margin-bottom: 10px;
         font-weight: 700;
         font-size: 15px;
     }
-    .skillBox{
+    .skillBox {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 30px;
     }
-    .skillBox p{
+    .skillBox p {
         padding: 4px 10px;
         margin: 0 10px 10px 0;
         border-radius: 10px;
@@ -43,22 +40,22 @@ const SkillWrap = styled.div`
         color: #fff;
     }
 
-    .React{
-        background-color: #65A0E9;
+    .React {
+        background-color: #65a0e9;
     }
-    .JavaScript{
-        background-color: #EC9490;
+    .JavaScript {
+        background-color: #ec9490;
     }
-    .Styled-components{
+    .Styled-components {
         background-color: grey;
     }
-    .HTML{
+    .HTML {
         background-color: grey;
     }
-    .CSS{
+    .CSS {
         background-color: grey;
     }
-    .jQuery{
-        background-color: #2451A7;
+    .jQuery {
+        background-color: #2451a7;
     }
-`
+`;

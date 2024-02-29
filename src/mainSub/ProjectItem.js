@@ -1,96 +1,98 @@
-import styled from "styled-components";
-import ProjectTripple from "../project/ProjectTripple";
-import ProjectMuseum from "../project/ProjectMuseum";
-import ProjectStarbucks from "../project/ProjectStarbucks";
-import ProjectPortfolio from "../project/ProjectPortfolio";
-import { useResponsiveApi } from "../context/responsive";
-import ProjectUlsan from "../project/ProjectUlsan";
-import Circlebg from "../util/Circlebg";
+import styled from 'styled-components';
+import ProjectTripple from '../project/ProjectTripple';
+import ProjectMuseum from '../project/ProjectMuseum';
+import ProjectStarbucks from '../project/ProjectStarbucks';
+import ProjectPortfolio from '../project/ProjectPortfolio';
+import { useResponsiveApi } from '../context/responsive';
+import ProjectUlsan from '../project/ProjectUlsan';
+import Circlebg from '../util/Circlebg';
 
-const ProjectItem = ()=>{
+const ProjectItem = () => {
     const { isMobile } = useResponsiveApi();
 
-    return(
+    return (
         <ProjectWrap id="Project1">
-            <div className="project"><Circlebg type={'project'} >Project</Circlebg></div>
+            <div className="project">
+                <Circlebg type={'project'}>Project</Circlebg>
+            </div>
             <ItemWrap>
                 <ProjectTripple />
                 <ProjectPortfolio />
                 <ProjectMuseum />
-                <div className={!isMobile? "project3_Wrap" : ""}>
+                <div className={!isMobile ? 'project3_Wrap' : ''}>
                     <ProjectStarbucks />
                     <ProjectUlsan />
                 </div>
             </ItemWrap>
         </ProjectWrap>
-    )
-}
+    );
+};
 export default ProjectItem;
 
 const ProjectWrap = styled.div`
     margin-bottom: 40px;
-    .project{
+    .project {
         margin-bottom: 60px;
         font-size: 40px;
         font-weight: 700;
     }
-`
+`;
 const ItemWrap = styled.div`
     box-sizing: border-box;
-    .project3_Wrap{
+    .project3_Wrap {
         display: flex;
         justify-content: space-between;
     }
-    .project3_Wrap .item.pc{
+    .project3_Wrap .item.pc {
         width: 49%;
     }
-    .item{
+    .item {
         box-sizing: border-box;
         width: 100%;
-        border-top: 5px solid #65A0E9;
-        box-shadow: 4px 10px 10px 1px rgba(0,0,0, 0.1);
+        border-top: 5px solid #65a0e9;
+        box-shadow: 4px 10px 10px 1px rgba(0, 0, 0, 0.1);
         background-color: #fff;
-        }
-    .item.pc{
+    }
+    .item.pc {
         padding: 80px 20px 60px 20px;
         margin-top: 60px;
     }
-    .item.pc.tripple{
+    .item.pc.tripple {
         padding: 60px 20px 40px 20px;
         margin-top: 60px;
     }
-    .item.mo{
+    .item.mo {
         padding: 30px 10px 20px 10px;
         margin-top: 60px;
     }
-    .item_In{
+    .item_In {
         max-width: 1240px;
         margin: 0 auto;
     }
-    .pr_info{
-        margin-bottom:30px;
+    .pr_info {
+        margin-bottom: 30px;
     }
-    .pr_info > div{
+    .pr_info > div {
         display: flex;
         margin-bottom: 10px;
     }
-    .item.mo .contentTxt{
+    .item.mo .contentTxt {
         width: 100%;
     }
-    .item.pc .contentTxt{
+    .item.pc .contentTxt {
         width: 64%;
     }
-    .item.pc .contentTxt.narr{
+    .item.pc .contentTxt.narr {
         width: 50%;
     }
-    .item.pc .contentTxt.p3{
+    .item.pc .contentTxt.p3 {
         width: 100%;
     }
-    .item.pc .contentFlex{
+    .item.pc .contentFlex {
         display: flex;
         justify-content: space-between;
     }
-    .item.mo .contentFlex{
+    .item.mo .contentFlex {
         display: block;
         position: relative;
     }
@@ -100,29 +102,29 @@ const ItemWrap = styled.div`
         font-weight: 600;
         font-size: 16px;
     }
-    .pr_head > div{
+    .pr_head > div {
         margin-right: 16px;
     }
-    .pr_name{
+    .pr_name {
         line-height: 1.6;
         font-size: 24px;
         font-weight: 700;
     }
-    .pr_subTitle{
+    .pr_subTitle {
         margin-bottom: 20px;
         margin-left: -6px;
         font-size: 19px;
         font-weight: 600;
     }
-    .pr_txt{
+    .pr_txt {
         font-size: 15px;
         line-height: 1.6;
     }
-    .pr_outline{
+    .pr_outline {
         width: 100%;
         margin-bottom: 30px;
     }
-    .pr_photo{
+    .pr_photo {
         padding: 30px 10px;
         margin-top: 40px;
         width: 30%;
@@ -133,29 +135,28 @@ const ItemWrap = styled.div`
         border-radius: 20px;
         overflow: hidden;
     }
-    .item.mo .pr_photo{
+    .item.mo .pr_photo {
         margin: 0 auto;
         margin-top: 40px;
     }
 
-    .pr_photo.p3{   
+    .pr_photo.p3 {
         margin: 0 auto;
         margin-top: 40px;
         max-width: 600px;
         width: 80%;
     }
-    .pr_photo.wide{
+    .pr_photo.wide {
         margin-top: 60px;
         max-width: 500px;
         max-height: 310px;
         width: 60%;
     }
-    .pr_photo img{
+    .pr_photo img {
         width: 100%;
         height: auto;
     }
-    .pr_explain{
+    .pr_explain {
         margin-bottom: 20px;
     }
-
-`
+`;

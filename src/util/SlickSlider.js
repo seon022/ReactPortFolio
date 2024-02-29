@@ -1,8 +1,8 @@
-import Slider from "react-slick";
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const SlickSlider = ({data}) => {
+const SlickSlider = ({ data }) => {
     const settings = {
         dots: true,
         arrows: false,
@@ -13,21 +13,13 @@ const SlickSlider = ({data}) => {
         autoplay: true,
         autoplaySpeed: 3000,
     };
-    return( 
+    return (
         <Slider {...settings}>
-            {
-                data.map((item)=> (
-                    <img
-                    key={item}
-                    src={item}
-                    alt='프로젝트 사진'
-                    width='100%'
-                />
-                ))
-            }
-                
-      </Slider>
+            {data.map((item) => (
+                <img key={item} src={item} alt="프로젝트 사진" width="100%" />
+            ))}
+        </Slider>
     );
-}
+};
 
 export default SlickSlider;
