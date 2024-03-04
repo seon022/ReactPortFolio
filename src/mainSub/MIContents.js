@@ -15,9 +15,9 @@ const MIContents = () => {
                         <span className="letterBlue">S</span>
                         <span className="letterRed">e</span>
                         <span className="letterYellow">on</span>
-                        <span className="letterBlue">Y</span>
-                        <span className="letterGr">ou</span>
-                        <span className="letterRed">ng</span>
+                        <span className="letterBlue">Yo</span>
+                        <span className="letterGr">un</span>
+                        <span className="letterRed">g's</span>
                     </div>
                     <div className="typing">
                         {<TypingText text="PORTFOLIO" speed={120} fontSize="34px" color="#222" />}
@@ -32,8 +32,8 @@ const MIContents = () => {
                         <p className="css">css</p>
                         <p className="js">js</p>
                         <p className="react">react</p>
-                        <p className="ts">ts</p>
-                        <p className="nodejs">nodejs</p>
+                        {/* <p className="ts">ts</p> */}
+                        {/* <p className="nodejs">nodejs</p> */}
                         <p className="jquery">jquery</p>
                     </div>
                 </Skill>
