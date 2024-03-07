@@ -23,9 +23,9 @@ const AboutMe = () => {
                         <div className="eduBox">
                             <p>
                                 그린컴퓨터학원
-                                <br /> 반응형 웹 & 프론트엔드 개발 실무 양성 과정
+                                <br /> 반응형 웹 & 프론트엔드 개발 실무 과정
                                 <br />
-                                2023.09 - 2024.03
+                                <span className="date">2023.09 - 2024.03</span>
                             </p>
                             <br />
                             - HTML과 CSS를 이용해 웹사이트 화면의 UI를 설계, 구현.
@@ -100,10 +100,13 @@ const EduWrap = styled.div`
         box-shadow: 4px 10px 10px 1px rgba(0, 0, 0, 0.1);
         background-color: #fff;
         line-height: 1.6;
-
         p {
             font-size: 18px;
             font-weight: 700;
+        }
+        .date {
+            font-size: 15px;
+            font-weight: 500;
         }
     }
 `;
