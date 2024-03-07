@@ -30,11 +30,10 @@ const AboutMe = () => {
                             <br />
                             - HTML과 CSS를 이용해 웹사이트 화면의 UI를 설계, 구현.
                             <br />
-                            - 화면 UI를 설계하고, 반응형 웹을 구현. <br />
+                            - 반응형 웹사이트 UI 설계, 반응형 웹 구현. <br />
                             - HTML, CSS, javascript를 활용해 웹 사이트를 구현하여 Netlify를 통해 웹에 배포.
-                            <br />- figma를 활용하여 반응형 웹사이트를 설계한 후 구현.
-                            <br />- React를 활용하는 프로젝트를 통해 앱 구현해보고 git과 Github를 통해 팀원과 프로젝트를
-                            공유하며 진행.
+                            <br />- figma를 활용하여 반응형 웹사이트를 설계하고 구현.
+                            <br />- React를 활용하는 프로젝트 진행, git과 github를 통해 팀원과 프로젝트 공유하며 진행.
                         </div>
                     </EduWrap>
                 </div>
@@ -48,7 +47,7 @@ export default AboutMe;
 const AboutWrap = styled.div`
     padding-top: 20px;
     margin: 0 auto;
-    margin-bottom: 160px;
+    margin-bottom: 80px;
     &.about_mo {
         padding-top: 20px;
     }
@@ -60,7 +59,7 @@ const MyTitle = styled.div`
     font-weight: 900;
     line-height: 1.6;
     .titleTxt {
-        margin-bottom: 50px;
+        margin-bottom: 60px;
     }
     .titleTxt.pc {
         width: 54%;
@@ -71,7 +70,7 @@ const MyTitle = styled.div`
     }
     .hello {
         margin-bottom: 20px;
-        font-size: 28px;
+        font-size: 26px;
         color: #444;
     }
     .overview {
@@ -92,7 +91,7 @@ const EduWrap = styled.div`
         width: 40%;
     }
     .edu {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         font-size: 24px;
     }
     .eduBox {

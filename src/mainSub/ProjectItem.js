@@ -11,15 +11,19 @@ const ProjectItem = () => {
     const { isMobile } = useResponsiveApi();
 
     return (
-        <ProjectWrap id="Project1">
+        <ProjectWrap>
             <div className="project">
                 <Circlebg type={'project'}>Project</Circlebg>
             </div>
             <ItemWrap>
                 <ProjectTripple />
-                <ProjectPortfolio />
-                <ProjectMuseum />
-                <div className={!isMobile ? 'project3_Wrap' : ''}>
+                <div className={isMobile ? 'margin mo' : 'margin'}>
+                    <ProjectPortfolio />
+                </div>
+                <div className={isMobile ? 'margin mo' : 'margin'} id="Project2">
+                    <ProjectMuseum />
+                </div>
+                <div className={!isMobile ? 'project3_Wrap margin_p3' : 'margin_p3 mo'} id="Project3">
                     <ProjectStarbucks />
                     <ProjectUlsan />
                 </div>
@@ -46,6 +50,19 @@ const ItemWrap = styled.div`
     .project3_Wrap .item.pc {
         width: 49%;
     }
+    .margin {
+        padding-top: 70px;
+    }
+
+    .margin.mo {
+        padding-top: 80px;
+    }
+    .margin_p3 {
+        padding-top: 40px;
+    }
+    .margin_p3.mo {
+        padding-top: 80px;
+    }
     .item {
         box-sizing: border-box;
         width: 100%;
@@ -55,7 +72,6 @@ const ItemWrap = styled.div`
     }
     .item.pc {
         padding: 80px 20px 60px 20px;
-        margin-top: 60px;
     }
     .item.pc.tripple {
         padding: 60px 20px 40px 20px;
@@ -63,7 +79,6 @@ const ItemWrap = styled.div`
     }
     .item.mo {
         padding: 30px 10px 20px 10px;
-        margin-top: 60px;
     }
     .item_In {
         max-width: 1240px;

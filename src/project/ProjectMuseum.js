@@ -10,7 +10,7 @@ const ProjectMuseum = () => {
     const { isMobile } = useResponsiveApi();
 
     return (
-        <div className={isMobile ? 'item mo' : 'item pc'} id="Project3">
+        <div className={isMobile ? 'item mo' : 'item pc'}>
             <div className="item_In">
                 <ProjectCont>
                     <div className="contentFlex">
