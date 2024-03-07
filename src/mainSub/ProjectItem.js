@@ -139,25 +139,22 @@ const ItemWrap = styled.div`
         width: 100%;
         margin-bottom: 30px;
     }
+    .item.mo .pr_photo {
+        margin: 40px auto 20px auto;
+        width: 80%;
+    }
     .pr_photo {
         padding: 30px 10px;
-        margin-top: 40px;
+        margin: 40px 0 20px 10px;
         width: 30%;
         max-height: 580px;
         max-width: 260px;
-        margin-left: 10px;
         border: 1px solid #ccc;
         border-radius: 20px;
         overflow: hidden;
     }
-    .item.mo .pr_photo {
-        margin: 0 auto;
-        margin-top: 40px;
-    }
-
     .pr_photo.p3 {
-        margin: 0 auto;
-        margin-top: 40px;
+        margin: 20px auto 30px auto;
         max-width: 600px;
         width: 80%;
     }
