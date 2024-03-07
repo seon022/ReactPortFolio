@@ -62,7 +62,7 @@ const MyTitle = styled.div`
         margin-bottom: 60px;
     }
     .titleTxt.pc {
-        width: 54%;
+        width: 40%;
     }
     .title {
         font-size: 50px;
@@ -88,7 +88,7 @@ const EduWrap = styled.div`
     font-weight: 500;
     line-height: 1.4;
     &.pc {
-        width: 40%;
+        width: 54%;
     }
     .edu {
         margin-bottom: 20px;

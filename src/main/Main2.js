@@ -28,7 +28,7 @@ const M2Wrap = styled.div`
         display: flex;
         justify-content: center;
         padding: 0 20px;
-        padding-top: 40px;
+        padding-top: 60px;
     }
     &.m2 {
         padding: 0 16px;

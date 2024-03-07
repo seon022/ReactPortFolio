@@ -16,7 +16,9 @@ const ProjectItem = () => {
                 <Circlebg type={'project'}>Project</Circlebg>
             </div>
             <ItemWrap>
-                <ProjectTripple />
+                <div className={isMobile ? 'p1_mo' : ''} id="Project1">
+                    <ProjectTripple />
+                </div>
                 <div className={isMobile ? 'margin mo' : 'margin'}>
                     <ProjectPortfolio />
                 </div>
@@ -36,13 +38,15 @@ export default ProjectItem;
 const ProjectWrap = styled.div`
     margin-bottom: 40px;
     .project {
-        margin-bottom: 60px;
         font-size: 40px;
         font-weight: 700;
     }
 `;
 const ItemWrap = styled.div`
     box-sizing: border-box;
+    .p1_mo {
+        padding-top: 80px;
+    }
     .project3_Wrap {
         display: flex;
         justify-content: space-between;
@@ -53,7 +57,6 @@ const ItemWrap = styled.div`
     .margin {
         padding-top: 70px;
     }
-
     .margin.mo {
         padding-top: 80px;
     }
@@ -141,7 +144,6 @@ const ItemWrap = styled.div`
     }
     .item.mo .pr_photo {
         margin: 40px auto 20px auto;
-        width: 80%;
     }
     .pr_photo {
         padding: 30px 10px;
